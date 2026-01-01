@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Packages</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../favicon.ico">
+</head>
+
+<body>
+    <div class="min-h-screen flex bg-background">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-sidebar fixed h-screen flex flex-col">
+            <div class="p-6 border-b border-sidebar-border">
+                <h1 class="text-xl font-bold text-sidebar-foreground flex items-center gap-2">
+                    <span class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-map-pin w-5 h-5 text-primary-foreground">
+                            <path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0Z" />
+                            <circle cx="12" cy="8" r="2" />
+                        </svg>
+                    </span>
+                    Dashboard
+                </h1>
+            </div>
+            <nav class="flex-1 p-4 space-y-1">
+                <a href="dashboard.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-layout-dashboard w-5 h-5">
+                        <rect width="7" height="9" x="3" y="3" rx="1" />
+                        <rect width="7" height="5" x="14" y="3" rx="1" />
+                        <rect width="7" height="9" x="14" y="12" rx="1" />
+                        <rect width="7" height="5" x="3" y="16" rx="1" />
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="destinations.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-map-pin w-5 h-5">
+                        <path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0Z" />
+                        <circle cx="12" cy="8" r="2" />
+                    </svg>
+                    Destinations
+                </a>
+                <a href="packages.html" class="sidebar-link-active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-package w-5 h-5">
+                        <path d="m7.5 4.274 1.5 1.5 6-6L21 3v18l-1.5-1.5-6 6L3 21V3l1.5 1.5 6-6Z" />
+                        <path d="M14.5 16.5 21 21" />
+                        <path d="M9.5 8.5 3 3" />
+                    </svg>
+                    Packages
+                </a>
+                <a href="bookings.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-calendar-check w-5 h-5">
+                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                        <line x1="16" x2="16" y1="2" y2="6" />
+                        <line x1="8" x2="8" y1="2" y2="6" />
+                        <line x1="3" x2="21" y1="10" y2="10" />
+                        <path d="m9 16 2 2 4-4" />
+                    </svg>
+                    Bookings
+                </a>
+                <a href="stories.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-file-text w-5 h-5">
+                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                        <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                        <path d="M10 9H8" />
+                        <path d="M16 13H8" />
+                        <path d="M16 17H8" />
+                    </svg>
+                    Stories
+                </a>
+                <a href="users.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-users w-5 h-5">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    Users
+                </a>
+                <a href="analytics.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-bar-chart-3 w-5 h-5">
+                        <path d="M3 3v18h18" />
+                        <path d="M18 17V9" />
+                        <path d="M13 17V5" />
+                        <path d="M8 17v-3" />
+                    </svg>
+                    Analytics
+                </a>
+            </nav>
+            <div class="p-4 border-t border-sidebar-border">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-full bg-sidebar-accent flex items-center justify-center text-sidebar-primary font-semibold">
+                        AD</div>
+                    <div>
+                        <p class="text-sm font-medium text-sidebar-foreground">Admin User</p>
+                        <p class="text-xs text-sidebar-muted">admin@travel.com</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 ml-64 p-8">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h1 class="text-2xl font-bold text-heading">Packages</h1>
+                    <p class="text-muted-foreground mt-1">Manage your travel packages</p>
+                </div>
+                <button class="btn-primary flex items-center gap-2" id="add-package-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-plus w-4 h-4">
+                        <path d="M12 5v14" />
+                        <path d="M5 12h14" />
+                    </svg>
+                    Add Package
+                </button>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex items-center gap-4 mb-6">
+                <div class="flex-1 relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-search w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-muted">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                    </svg>
+                    <input type="text" placeholder="Search packages..." class="input-field pl-10"
+                        id="search-packages" />
+                </div>
+                <button class="btn-outline flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-filter w-4 h-4">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+                    </svg>
+                    Filters
+                </button>
+            </div>
+
+            <!-- Packages Table -->
+            <div class="table-container">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-secondary/50">
+                            <tr>
+                                <th
+                                    class="text-left py-3 px-6 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                                    Package</th>
+                                <th
+                                    class="text-left py-3 px-6 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                                    Destination</th>
+                                <th
+                                    class="text-left py-3 px-6 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                                    Price</th>
+                                <th
+                                    class="text-left py-3 px-6 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                                    Duration</th>
+                                <th
+                                    class="text-left py-3 px-6 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                                    Capacity</th>
+                                <th
+                                    class="text-left py-3 px-6 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                                    Bookings</th>
+                                <th
+                                    class="text-left py-3 px-6 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                                    Status</th>
+                                <th
+                                    class="text-left py-3 px-6 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                                    Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-border/30" id="packages-table-body">
+                            <!-- Hardcoded packages data -->
+                            <tr class="hover:bg-secondary/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-package w-5 h-5 text-primary">
+                                                <path
+                                                    d="m7.5 4.274 1.5 1.5 6-6L21 3v18l-1.5-1.5-6 6L3 21V3l1.5 1.5 6-6Z" />
+                                                <path d="M14.5 16.5 21 21" />
+                                                <path d="M9.5 8.5 3 3" />
+                                            </svg>
+                                        </div>
+                                        <span class="font-medium">Bali Paradise Tour</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">Bali, Indonesia</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1 font-semibold text-heading">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-dollar-sign w-4 h-4">
+                                            <line x1="12" x2="12" y1="2" y2="22" />
+                                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                        </svg>
+                                        1,299
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-clock w-4 h-4">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                        7 days
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-users w-4 h-4">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                            <circle cx="9" cy="7" r="4" />
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                        </svg>
+                                        12
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm font-medium">45</td>
+                                <td class="py-4 px-6">
+                                    <span class="badge-success">Active</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-2">
+                                        <button
+                                            class="p-2 hover:bg-secondary rounded-lg transition-colors view-package-btn"
+                                            data-package-id="1" data-title="Bali Paradise Tour"
+                                            data-destination="Bali, Indonesia" data-price="1299" data-duration="7"
+                                            data-capacity="12" data-bookable="true">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-eye w-4 h-4 text-muted-foreground">
+                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                                                <circle cx="12" cy="12" r="3" />
+                                            </svg>
+                                        </button>
+                                        <button
+                                            class="p-2 hover:bg-secondary rounded-lg transition-colors edit-package-btn"
+                                            data-package-id="1" data-title="Bali Paradise Tour"
+                                            data-slug="bali-paradise-tour" data-destination="Bali, Indonesia"
+                                            data-price="1299" data-duration="7" data-capacity="12" data-bookable="true">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-edit w-4 h-4 text-muted-foreground">
+                                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5Z" />
+                                            </svg>
+                                        </button>
+                                        <button class="p-2 hover:bg-destructive/10 rounded-lg transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-trash-2 w-4 h-4 text-destructive">
+                                                <path d="M3 6h18" />
+                                                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                <line x1="10" x2="10" y1="11" y2="17" />
+                                                <line x1="14" x2="14" y1="11" y2="17" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-secondary/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-package w-5 h-5 text-primary">
+                                                <path
+                                                    d="m7.5 4.274 1.5 1.5 6-6L21 3v18l-1.5-1.5-6 6L3 21V3l1.5 1.5 6-6Z" />
+                                                <path d="M14.5 16.5 21 21" />
+                                                <path d="M9.5 8.5 3 3" />
+                                            </svg>
+                                        </div>
+                                        <span class="font-medium">Tokyo Explorer</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">Tokyo, Japan</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1 font-semibold text-heading">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-dollar-sign w-4 h-4">
+                                            <line x1="12" x2="12" y1="2" y2="22" />
+                                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                        </svg>
+                                        2,450
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-clock w-4 h-4">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                        10 days
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-users w-4 h-4">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                            <circle cx="9" cy="7" r="4" />
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                        </svg>
+                                        8
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm font-medium">32</td>
+                                <td class="py-4 px-6">
+                                    <span class="badge-success">Active</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-2">
+                                        <button
+                                            class="p-2 hover:bg-secondary rounded-lg transition-colors view-package-btn"
+                                            data-package-id="2" data-title="Tokyo Explorer"
+                                            data-destination="Tokyo, Japan" data-price="2450" data-duration="10"
+                                            data-capacity="8" data-bookable="true">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-eye w-4 h-4 text-muted-foreground">
+                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                                                <circle cx="12" cy="12" r="3" />
+                                            </svg>
+                                        </button>
+                                        <button
+                                            class="p-2 hover:bg-secondary rounded-lg transition-colors edit-package-btn"
+                                            data-package-id="2" data-title="Tokyo Explorer" data-slug="tokyo-explorer"
+                                            data-destination="Tokyo, Japan" data-price="2450" data-duration="10"
+                                            data-capacity="8" data-bookable="true">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-edit w-4 h-4 text-muted-foreground">
+                                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5Z" />
+                                            </svg>
+                                        </button>
+                                        <button class="p-2 hover:bg-destructive/10 rounded-lg transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-trash-2 w-4 h-4 text-destructive">
+                                                <path d="M3 6h18" />
+                                                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                <line x1="10" x2="10" y1="11" y2="17" />
+                                                <line x1="14" x2="14" y1="11" y2="17" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-secondary/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-package w-5 h-5 text-primary">
+                                                <path
+                                                    d="m7.5 4.274 1.5 1.5 6-6L21 3v18l-1.5-1.5-6 6L3 21V3l1.5 1.5 6-6Z" />
+                                                <path d="M14.5 16.5 21 21" />
+                                                <path d="M9.5 8.5 3 3" />
+                                            </svg>
+                                        </div>
+                                        <span class="font-medium">Maldives Retreat</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">Maldives</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1 font-semibold text-heading">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-dollar-sign w-4 h-4">
+                                            <line x1="12" x2="12" y1="2" y2="22" />
+                                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                        </svg>
+                                        3,899
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-clock w-4 h-4">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                        5 days
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-users w-4 h-4">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                            <circle cx="9" cy="7" r="4" />
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                        </svg>
+                                        6
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm font-medium">28</td>
+                                <td class="py-4 px-6">
+                                    <span class="badge-success">Active</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-2">
+                                        <button
+                                            class="p-2 hover:bg-secondary rounded-lg transition-colors view-package-btn"
+                                            data-package-id="3" data-title="Maldives Retreat"
+                                            data-destination="Maldives" data-price="3899" data-duration="5"
+                                            data-capacity="6" data-bookable="true">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-eye w-4 h-4 text-muted-foreground">
+                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                                                <circle cx="12" cy="12" r="3" />
+                                            </svg>
+                                        </button>
+                                        <button
+                                            class="p-2 hover:bg-secondary rounded-lg transition-colors edit-package-btn"
+                                            data-package-id="3" data-title="Maldives Retreat"
+                                            data-slug="maldives-retreat" data-destination="Maldives" data-price="3899"
+                                            data-duration="5" data-capacity="6" data-bookable="true">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-edit w-4 h-4 text-muted-foreground">
+                                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5Z" />
+                                            </svg>
+                                        </button>
+                                        <button class="p-2 hover:bg-destructive/10 rounded-lg transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-trash-2 w-4 h-4 text-destructive">
+                                                <path d="M3 6h18" />
+                                                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                <line x1="10" x2="10" y1="11" y2="17" />
+                                                <line x1="14" x2="14" y1="11" y2="17" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-secondary/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-package w-5 h-5 text-primary">
+                                                <path
+                                                    d="m7.5 4.274 1.5 1.5 6-6L21 3v18l-1.5-1.5-6 6L3 21V3l1.5 1.5 6-6Z" />
+                                                <path d="M14.5 16.5 21 21" />
+                                                <path d="M9.5 8.5 3 3" />
+                                            </svg>
+                                        </div>
+                                        <span class="font-medium">Swiss Alps Adventure</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">Swiss Alps</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1 font-semibold text-heading">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-dollar-sign w-4 h-4">
+                                            <line x1="12" x2="12" y1="2" y2="22" />
+                                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                        </svg>
+                                        2,150
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-clock w-4 h-4">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                        8 days
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-users w-4 h-4">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                            <circle cx="9" cy="7" r="4" />
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                        </svg>
+                                        10
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm font-medium">18</td>
+                                <td class="py-4 px-6">
+                                    <span class="badge-warning">Inactive</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-2">
+                                        <button
+                                            class="p-2 hover:bg-secondary rounded-lg transition-colors view-package-btn"
+                                            data-package-id="4" data-title="Swiss Alps Adventure"
+                                            data-destination="Swiss Alps" data-price="2150" data-duration="8"
+                                            data-capacity="10" data-bookable="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-eye w-4 h-4 text-muted-foreground">
+                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                                                <circle cx="12" cy="12" r="3" />
+                                            </svg>
+                                        </button>
+                                        <button
+                                            class="p-2 hover:bg-secondary rounded-lg transition-colors edit-package-btn"
+                                            data-package-id="4" data-title="Swiss Alps Adventure"
+                                            data-slug="swiss-adventure" data-destination="Swiss Alps" data-price="2150"
+                                            data-duration="8" data-capacity="10" data-bookable="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-edit w-4 h-4 text-muted-foreground">
+                                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5Z" />
+                                            </svg>
+                                        </button>
+                                        <button class="p-2 hover:bg-destructive/10 rounded-lg transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-trash-2 w-4 h-4 text-destructive">
+                                                <path d="M3 6h18" />
+                                                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                                <line x1="10" x2="10" y1="11" y2="17" />
+                                                <line x1="14" x2="14" y1="11" y2="17" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-secondary/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-package w-5 h-5 text-primary">
+                                                <path
+                                                    d="m7.5 4.274 1.5 1.5 6-6L21 3v18l-1.5-1.5-6 6L3 21V3l1.5 1.5 6-6Z" />
+                                                <path d="M14.5 16.5 21 21" />
+                                                <path d="M9.5 8.5 3 3" />
+                                            </svg>
+                                        </div>
+                                        <span class="font-medium">Greek Islands Cruise</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">Santorini, Greece</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1 font-semibold text-heading">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-dollar-sign w-4 h-4">
+                                            <line x1="12" x2="12" y1="2" y2="22" />
+                                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                        </svg>
+                                        1,875
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-clock w-4 h-4">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polyline points="12 6 12 12 16 14" />
+                                        </svg>
+                                        6 days
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-users w-4 h-4">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                            <circle cx="9" cy="7" r="4" />
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                        </svg>
+                                        20
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm font-medium">56</td>
+                                <td class="py-4 px-6">
+                                    <span class="badge-success">Active</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <button class="p-2 hover:bg-secondary rounded-lg transition-colors view-package-btn"
+                                        data-package-id="5" data-title="Greek Islands Cruise"
+                                        data-destination="Santorini, Greece" data-price="1875" data-duration="6"
+                                        data-capacity="20" data-bookable="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-eye w-4 h-4 text-muted-foreground">
+                                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                                            <circle cx="12" cy="12" r="3" />
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 hover:bg-secondary rounded-lg transition-colors edit-package-btn"
+                                        data-package-id="5" data-title="Greek Islands Cruise" data-slug="greek-islands"
+                                        data-destination="Santorini, Greece" data-price="1875" data-duration="6"
+                                        data-capacity="20" data-bookable="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-edit w-4 h-4 text-muted-foreground">
+                                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5Z" />
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 hover:bg-destructive/10 rounded-lg transition-colors">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-trash-2 w-4 h-4 text-destructive">
+                                            <path d="M3 6h18" />
+                                            <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                            <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                            <line x1="10" x2="10" y1="11" y2="17" />
+                                            <line x1="14" x2="14" y1="11" y2="17" />
+                                        </svg>
+                                    </button>
+                </div>
+                </td>
+                </tr>
+                <tr class="hover:bg-secondary/30 transition-colors">
+                    <td class="py-4 px-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-package w-5 h-5 text-primary">
+                                    <path d="m7.5 4.274 1.5 1.5 6-6L21 3v18l-1.5-1.5-6 6L3 21V3l1.5 1.5 6-6Z" />
+                                    <path d="M14.5 16.5 21 21" />
+                                    <path d="M9.5 8.5 3 3" />
+                                </svg>
+                            </div>
+                            <span class="font-medium">Paris Romance Package</span>
+                        </div>
+                    </td>
+                    <td class="py-4 px-6 text-sm text-muted-foreground">Paris, France</td>
+                    <td class="py-4 px-6">
+                        <div class="flex items-center gap-1 font-semibold text-heading">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-dollar-sign w-4 h-4">
+                                <line x1="12" x2="12" y1="2" y2="22" />
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
+                            1,650
+                        </div>
+                    </td>
+                    <td class="py-4 px-6">
+                        <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-clock w-4 h-4">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            4 days
+                        </div>
+                    </td>
+                    <td class="py-4 px-6">
+                        <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-users w-4 h-4">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                            4
+                        </div>
+                    </td>
+                    <td class="py-4 px-6 text-sm font-medium">24</td>
+                    <td class="py-4 px-6">
+                        <span class="badge-success">Active</span>
+                    </td>
+                    <td class="py-4 px-6">
+                        <div class="flex items-center gap-2">
+                            <button class="p-2 hover:bg-secondary rounded-lg transition-colors view-package-btn"
+                                data-package-id="6" data-title="Paris Romance Package" data-destination="Paris, France"
+                                data-price="1650" data-duration="4" data-capacity="4" data-bookable="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-eye w-4 h-4 text-muted-foreground">
+                                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </button>
+                            <button class="p-2 hover:bg-secondary rounded-lg transition-colors edit-package-btn"
+                                data-package-id="6" data-title="Paris Romance Package" data-slug="paris-romance"
+                                data-destination="Paris, France" data-price="1650" data-duration="4" data-capacity="4"
+                                data-bookable="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-edit w-4 h-4 text-muted-foreground">
+                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5Z" />
+                                </svg>
+                            </button>
+                            <button class="p-2 hover:bg-destructive/10 rounded-lg transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4 text-destructive">
+                                    <path d="M3 6h18" />
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                    <line x1="10" x2="10" y1="11" y2="17" />
+                                    <line x1="14" x2="14" y1="11" y2="17" />
+                                </svg>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="hover:bg-secondary/30 transition-colors">
+                    <td class="py-4 px-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-package w-5 h-5 text-primary">
+                                    <path d="m7.5 4.274 1.5 1.5 6-6L21 3v18l-1.5-1.5-6 6L3 21V3l1.5 1.5 6-6Z" />
+                                    <path d="M14.5 16.5 21 21" />
+                                    <path d="M9.5 8.5 3 3" />
+                                </svg>
+                            </div>
+                            <span class="font-medium">Dubai Luxury Experience</span>
+                        </div>
+                    </td>
+                    <td class="py-4 px-6 text-sm text-muted-foreground">Dubai, UAE</td>
+                    <td class="py-4 px-6">
+                        <div class="flex items-center gap-1 font-semibold text-heading">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-dollar-sign w-4 h-4">
+                                <line x1="12" x2="12" y1="2" y2="22" />
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
+                            4,500
+                        </div>
+                    </td>
+                    <td class="py-4 px-6">
+                        <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-clock w-4 h-4">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            7 days
+                        </div>
+                    </td>
+                    <td class="py-4 px-6">
+                        <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-users w-4 h-4">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                            8
+                        </div>
+                    </td>
+                    <td class="py-4 px-6 text-sm font-medium">15</td>
+                    <td class="py-4 px-6">
+                        <span class="badge-success">Active</span>
+                    </td>
+                    <td class="py-4 px-6">
+                        <div class="flex items-center gap-2">
+                            <button class="p-2 hover:bg-secondary rounded-lg transition-colors view-package-btn"
+                                data-package-id="7" data-title="Dubai Luxury Experience" data-destination="Dubai, UAE"
+                                data-price="4500" data-duration="7" data-capacity="8" data-bookable="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-eye w-4 h-4 text-muted-foreground">
+                                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </button>
+                            <button class="p-2 hover:bg-secondary rounded-lg transition-colors edit-package-btn"
+                                data-package-id="7" data-title="Dubai Luxury Experience" data-slug="dubai-luxury"
+                                data-destination="Dubai, UAE" data-price="4500" data-duration="7" data-capacity="8"
+                                data-bookable="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-edit w-4 h-4 text-muted-foreground">
+                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5Z" />
+                                </svg>
+                            </button>
+                            <button class="p-2 hover:bg-destructive/10 rounded-lg transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4 text-destructive">
+                                    <path d="M3 6h18" />
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                    <line x1="10" x2="10" y1="11" y2="17" />
+                                    <line x1="14" x2="14" y1="11" y2="17" />
+                                </svg>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="hover:bg-secondary/30 transition-colors">
+                    <td class="py-4 px-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-package w-5 h-5 text-primary">
+                                    <path d="m7.5 4.274 1.5 1.5 6-6L21 3v18l-1.5-1.5-6 6L3 21V3l1.5 1.5 6-6Z" />
+                                    <path d="M14.5 16.5 21 21" />
+                                    <path d="M9.5 8.5 3 3" />
+                                </svg>
+                            </div>
+                            <span class="font-medium">Machu Picchu Trek</span>
+                        </div>
+                    </td>
+                    <td class="py-4 px-6 text-sm text-muted-foreground">Machu Picchu</td>
+                    <td class="py-4 px-6">
+                        <div class="flex items-center gap-1 font-semibold text-heading">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-dollar-sign w-4 h-4">
+                                <line x1="12" x2="12" y1="2" y2="22" />
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
+                            1,999
+                        </div>
+                    </td>
+                    <td class="py-4 px-6">
+                        <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-clock w-4 h-4">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            9 days
+                        </div>
+                    </td>
+                    <td class="py-4 px-6">
+                        <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-users w-4 h-4">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                            16
+                        </div>
+                    </td>
+                    <td class="py-4 px-6 text-sm font-medium">38</td>
+                    <td class="py-4 px-6">
+                        <span class="badge-success">Active</span>
+                    </td>
+                    <td class="py-4 px-6">
+                        <div class="flex items-center gap-2">
+                            <button class="p-2 hover:bg-secondary rounded-lg transition-colors view-package-btn"
+                                data-package-id="8" data-title="Machu Picchu Trek" data-destination="Machu Picchu"
+                                data-price="1999" data-duration="9" data-capacity="16" data-bookable="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-eye w-4 h-4 text-muted-foreground">
+                                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </button>
+                            <button class="p-2 hover:bg-secondary rounded-lg transition-colors edit-package-btn"
+                                data-package-id="8" data-title="Machu Picchu Trek" data-slug="machu-picchu-trek"
+                                data-destination="Machu Picchu" data-price="1999" data-duration="9" data-capacity="16"
+                                data-bookable="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-edit w-4 h-4 text-muted-foreground">
+                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5Z" />
+                                </svg>
+                            </button>
+                            <button class="p-2 hover:bg-destructive/10 rounded-lg transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4 text-destructive">
+                                    <path d="M3 6h18" />
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                    <line x1="10" x2="10" y1="11" y2="17" />
+                                    <line x1="14" x2="14" y1="11" y2="17" />
+                                </svg>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+    </div>
+    </main>
+
+    <!-- Add/Edit Modal -->
+    <div id="add-edit-package-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 hidden">
+        <div class="bg-card rounded-2xl shadow-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto animate-scale-in">
+            <div class="p-6 border-b border-border/30 flex items-center justify-between">
+                <h2 class="text-xl font-bold text-heading" id="package-modal-title"></h2>
+                <button class="text-muted-foreground hover:text-foreground" id="close-package-modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-x w-5 h-5">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="p-6 space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2" for="package-title">Title</label>
+                    <input type="text" class="input-field" id="package-title" placeholder="Package title" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2" for="package-slug">Slug</label>
+                    <input type="text" class="input-field" id="package-slug" placeholder="package-slug" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2" for="package-destination">Destination</label>
+                    <div class="relative">
+                        <select class="input-field appearance-none" id="package-destination">
+                            <option value="">Select destination</option>
+                            <option value="Bali, Indonesia">Bali, Indonesia</option>
+                            <option value="Tokyo, Japan">Tokyo, Japan</option>
+                            <option value="Maldives">Maldives</option>
+                            <option value="Swiss Alps">Swiss Alps</option>
+                            <option value="Santorini, Greece">Santorini, Greece</option>
+                            <option value="Paris, France">Paris, France</option>
+                            <option value="Dubai, UAE">Dubai, UAE</option>
+                            <option value="Machu Picchu">Machu Picchu</option>
+                        </select>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-down w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-muted pointer-events-none">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-2" for="package-price">Price</label>
+                        <input type="number" class="input-field" id="package-price" placeholder="0.00" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2" for="package-duration">Duration (days)</label>
+                        <input type="number" class="input-field" id="package-duration" placeholder="0" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2" for="package-capacity">Capacity</label>
+                        <input type="number" class="input-field" id="package-capacity" placeholder="0" />
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2" for="package-summary">Summary</label>
+                    <textarea class="input-field h-24 resize-none" id="package-summary"
+                        placeholder="Brief package summary"></textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2" for="package-description">Description</label>
+                    <textarea class="input-field h-32 resize-none" id="package-description"
+                        placeholder="Detailed description..."></textarea>
+                </div>
+                <div class="flex items-center gap-3">
+                    <input type="checkbox" id="package-bookable" class="w-4 h-4 accent-primary" />
+                    <label for="package-bookable" class="text-sm font-medium">Available for booking</label>
+                </div>
+            </div>
+            <div class="p-6 border-t border-border/30 flex items-center justify-end gap-3">
+                <button class="btn-outline" id="cancel-package-edit">Cancel</button>
+                <button class="btn-primary" id="save-package-btn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const packagesData = [
+                { id: "1", slug: "bali-paradise-tour", title: "Bali Paradise Tour", destination: "Bali, Indonesia", price: 1299, currency: "USD", duration: 7, capacity: 12, is_bookable: true, bookings: 45 },
+                { id: "2", slug: "tokyo-explorer", title: "Tokyo Explorer", destination: "Tokyo, Japan", price: 2450, currency: "USD", duration: 10, capacity: 8, is_bookable: true, bookings: 32 },
+                { id: "3", slug: "maldives-retreat", title: "Maldives Retreat", destination: "Maldives", price: 3899, currency: "USD", duration: 5, capacity: 6, is_bookable: true, bookings: 28 },
+                { id: "4", slug: "swiss-adventure", title: "Swiss Alps Adventure", destination: "Swiss Alps", price: 2150, currency: "USD", duration: 8, capacity: 10, is_bookable: false, bookings: 18 },
+                { id: "5", slug: "greek-islands", title: "Greek Islands Cruise", destination: "Santorini, Greece", price: 1875, currency: "USD", duration: 6, capacity: 20, is_bookable: true, bookings: 56 },
+                { id: "6", slug: "paris-romance", title: "Paris Romance Package", destination: "Paris, France", price: 1650, currency: "USD", duration: 4, capacity: 4, is_bookable: true, bookings: 24 },
+                { id: "7", slug: "dubai-luxury", title: "Dubai Luxury Experience", destination: "Dubai, UAE", price: 4500, currency: "USD", duration: 7, capacity: 8, is_bookable: true, bookings: 15 },
+                { id: "8", slug: "machu-picchu-trek", title: "Machu Picchu Trek", destination: "Machu Picchu", price: 1999, currency: "USD", duration: 9, capacity: 16, is_bookable: true, bookings: 38 },
+            ];
+
+            const searchInput = document.getElementById('search-packages');
+            const packagesTableBody = document.getElementById('packages-table-body');
+            const addPackageBtn = document.getElementById('add-package-btn');
+            const addEditPackageModal = document.getElementById('add-edit-package-modal');
+            const closePackageModalBtn = document.getElementById('close-package-modal');
+            const cancelPackageEditBtn = document.getElementById('cancel-package-edit');
+            const savePackageBtn = document.getElementById('save-package-btn');
+            const modalTitle = document.getElementById('package-modal-title');
+            const inputTitle = document.getElementById('package-title');
+            const inputSlug = document.getElementById('package-slug');
+            const inputDestination = document.getElementById('package-destination');
+            const inputPrice = document.getElementById('package-price');
+            const inputDuration = document.getElementById('package-duration');
+            const inputCapacity = document.getElementById('package-capacity');
+            const inputBookable = document.getElementById('package-bookable');
+
+            let currentSelectedPackage = null;
+
+            function renderPackages(filteredData) {
+                packagesTableBody.innerHTML = '';
+                filteredData.forEach(pkg => {
+                    const row = document.createElement('tr');
+                    row.className = 'hover:bg-secondary/30 transition-colors';
+                    row.innerHTML = `
+                        <td class="py-4 px-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package w-5 h-5 text-primary"><path d="m7.5 4.274 1.5 1.5 6-6L21 3v18l-1.5-1.5-6 6L3 21V3l1.5 1.5 6-6Z"/><path d="M14.5 16.5 21 21"/><path d="M9.5 8.5 3 3"/></svg>
+                                </div>
+                                <span class="font-medium">${pkg.title}</span>
+                            </div>
+                        </td>
+                        <td class="py-4 px-6 text-sm text-muted-foreground">${pkg.destination}</td>
+                        <td class="py-4 px-6">
+                            <div class="flex items-center gap-1 font-semibold text-heading">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign w-4 h-4"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                ${pkg.price.toLocaleString()}
+                            </div>
+                        </td>
+                        <td class="py-4 px-6">
+                            <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-4 h-4"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                ${pkg.duration} days
+                            </div>
+                        </td>
+                        <td class="py-4 px-6">
+                            <div class="flex items-center gap-1 text-sm text-muted-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-4 h-4"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                ${pkg.capacity}
+                            </div>
+                        </td>
+                        <td class="py-4 px-6 text-sm font-medium">${pkg.bookings}</td>
+                        <td class="py-4 px-6">
+                            <span class="${pkg.is_bookable ? 'badge-success' : 'badge-warning'}">
+                                ${pkg.is_bookable ? 'Active' : 'Inactive'}
+                            </span>
+                        </td>
+                        <td class="py-4 px-6">
+                            <div class="flex items-center gap-2">
+                                <button class="p-2 hover:bg-secondary rounded-lg transition-colors view-package-btn"
+                                        data-package-id="${pkg.id}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye w-4 h-4 text-muted-foreground"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                </button>
+                                <button class="p-2 hover:bg-secondary rounded-lg transition-colors edit-package-btn"
+                                        data-package-id="${pkg.id}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-edit w-4 h-4 text-muted-foreground"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5Z"/></svg>
+                                </button>
+                                <button class="p-2 hover:bg-destructive/10 rounded-lg transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4 text-destructive"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg>
+                                </button>
+                            </div>
+                        </td>
+                    `;
+                    packagesTableBody.appendChild(row);
+                });
+                attachModalTriggerListeners();
+            }
+
+            function filterPackages() {
+                const query = searchInput.value.toLowerCase();
+                const filtered = packagesData.filter(p =>
+                    p.title.toLowerCase().includes(query) || p.destination.toLowerCase().includes(query)
+                );
+                renderPackages(filtered);
+            }
+
+            searchInput.addEventListener('input', filterPackages);
+
+            addPackageBtn.addEventListener('click', () => {
+                currentSelectedPackage = null;
+                modalTitle.textContent = "Add New Package";
+                inputTitle.value = '';
+                inputSlug.value = '';
+                inputDestination.value = '';
+                inputPrice.value = '';
+                inputDuration.value = '';
+                inputCapacity.value = '';
+                inputBookable.checked = false;
+                addEditPackageModal.classList.remove('hidden');
+            });
+
+            function attachModalTriggerListeners() {
+                document.querySelectorAll('.edit-package-btn').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const packageId = button.dataset.packageId;
+                        currentSelectedPackage = packagesData.find(p => p.id === packageId);
+                        if (currentSelectedPackage) {
+                            modalTitle.textContent = "Edit Package";
+                            inputTitle.value = currentSelectedPackage.title;
+                            inputSlug.value = currentSelectedPackage.slug;
+                            inputDestination.value = currentSelectedPackage.destination;
+                            inputPrice.value = currentSelectedPackage.price;
+                            inputDuration.value = currentSelectedPackage.duration;
+                            inputCapacity.value = currentSelectedPackage.capacity;
+                            inputBookable.checked = currentSelectedPackage.is_bookable;
+                            addEditPackageModal.classList.remove('hidden');
+                        }
+                    });
+                });
+            }
+
+            closePackageModalBtn.addEventListener('click', () => {
+                addEditPackageModal.classList.add('hidden');
+            });
+
+            cancelPackageEditBtn.addEventListener('click', () => {
+                addEditPackageModal.classList.add('hidden');
+            });
+
+            savePackageBtn.addEventListener('click', () => {
+                // In a real application, you'd send this data to a backend.
+                // For this static version, we'll just log it.
+                console.log('Saving package:', {
+                    id: currentSelectedPackage ? currentSelectedPackage.id : 'new-id', // Simulate ID for new ones
+                    title: inputTitle.value,
+                    slug: inputSlug.value,
+                    destination: inputDestination.value,
+                    price: inputPrice.value,
+                    duration: inputDuration.value,
+                    capacity: inputCapacity.value,
+                    is_bookable: inputBookable.checked
+                });
+                addEditPackageModal.classList.add('hidden');
+                // Re-render if necessary to show changes
+                filterPackages();
+            });
+
+            // Initial render
+            renderPackages(packagesData);
+        });
+    </script>
+</body>
+
+</html>

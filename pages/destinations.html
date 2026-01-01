@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Destinations</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../favicon.ico">
+</head>
+
+<body>
+    <div class="min-h-screen flex bg-background">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-sidebar fixed h-screen flex flex-col">
+            <div class="p-6 border-b border-sidebar-border">
+                <h1 class="text-xl font-bold text-sidebar-foreground flex items-center gap-2">
+                    <span class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-map-pin w-5 h-5 text-primary-foreground">
+                            <path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0Z" />
+                            <circle cx="12" cy="8" r="2" />
+                        </svg>
+                    </span>
+                    Dashboard
+                </h1>
+            </div>
+            <nav class="flex-1 p-4 space-y-1">
+                <a href="dashboard.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-layout-dashboard w-5 h-5">
+                        <rect width="7" height="9" x="3" y="3" rx="1" />
+                        <rect width="7" height="5" x="14" y="3" rx="1" />
+                        <rect width="7" height="9" x="14" y="12" rx="1" />
+                        <rect width="7" height="5" x="3" y="16" rx="1" />
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="destinations.html" class="sidebar-link-active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-map-pin w-5 h-5">
+                        <path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0Z" />
+                        <circle cx="12" cy="8" r="2" />
+                    </svg>
+                    Destinations
+                </a>
+                <a href="packages.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-package w-5 h-5">
+                        <path d="m7.5 4.274 1.5 1.5 6-6L21 3v18l-1.5-1.5-6 6L3 21V3l1.5 1.5 6-6Z" />
+                        <path d="M14.5 16.5 21 21" />
+                        <path d="M9.5 8.5 3 3" />
+                    </svg>
+                    Packages
+                </a>
+                <a href="bookings.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-calendar-check w-5 h-5">
+                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                        <line x1="16" x2="16" y1="2" y2="6" />
+                        <line x1="8" x2="8" y1="2" y2="6" />
+                        <line x1="3" x2="21" y1="10" y2="10" />
+                        <path d="m9 16 2 2 4-4" />
+                    </svg>
+                    Bookings
+                </a>
+                <a href="stories.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-file-text w-5 h-5">
+                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                        <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                        <path d="M10 9H8" />
+                        <path d="M16 13H8" />
+                        <path d="M16 17H8" />
+                    </svg>
+                    Stories
+                </a>
+                <a href="users.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-users w-5 h-5">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    Users
+                </a>
+                <a href="analytics.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-bar-chart-3 w-5 h-5">
+                        <path d="M3 3v18h18" />
+                        <path d="M18 17V9" />
+                        <path d="M13 17V5" />
+                        <path d="M8 17v-3" />
+                    </svg>
+                    Analytics
+                </a>
+            </nav>
+            <div class="p-4 border-t border-sidebar-border">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-full bg-sidebar-accent flex items-center justify-center text-sidebar-primary font-semibold">
+                        AD</div>
+                    <div>
+                        <p class="text-sm font-medium text-sidebar-foreground">Admin User</p>
+                        <p class="text-xs text-sidebar-muted">admin@travel.com</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 ml-64 p-8">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h1 class="text-2xl font-bold text-heading">Destinations</h1>
+                    <p class="text-muted-foreground mt-1">Manage your travel destinations</p>
+                </div>
+                <button class="btn-primary flex items-center gap-2" id="add-destination-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-plus w-4 h-4">
+                        <path d="M12 5v14" />
+                        <path d="M5 12h14" />
+                    </svg>
+                    Add Destination
+                </button>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex items-center gap-4 mb-6">
+                <div class="flex-1 relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-search w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-muted">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                    </svg>
+                    <input type="text" placeholder="Search destinations..." class="input-field pl-10"
+                        id="search-destinations" />
+                </div>
+                <button class="btn-outline flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-filter w-4 h-4">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+                    </svg>
+                    Filters
+                </button>
+            </div>
+
+            <!-- Destinations Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8"
+                id="destinations-grid">
+                <!-- Hardcoded destinations data -->
+                <div class="card-elevated overflow-hidden group animate-fade-in">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=200&h=150&fit=crop"
+                            alt="Bali, Indonesia" class="w-full h-40 object-cover" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div class="absolute top-3 right-3">
+                            <span class="badge-success">Published</span>
+                        </div>
+                        <div
+                            class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-destination-btn"
+                                data-destination-id="1" data-title="Bali, Indonesia" data-slug="bali-indonesia"
+                                data-country="Indonesia" data-region="Southeast Asia" data-is-published="true"
+                                data-packages="8"
+                                data-image="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=200&h=150&fit=crop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-eye w-4 h-4" />
+                            </button>
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-destination-btn"
+                                data-destination-id="1" data-title="Bali, Indonesia" data-slug="bali-indonesia"
+                                data-country="Indonesia" data-region="Southeast Asia" data-is-published="true"
+                                data-packages="8"
+                                data-image="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=200&h=150&fit=crop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-edit w-4 h-4" />
+                            </button>
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-heading mb-1">Bali, Indonesia</h3>
+                        <div class="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-globe w-4 h-4" />
+                            Indonesia · Southeast Asia
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-muted-foreground">8 packages</span>
+                            <button class="text-muted-foreground hover:text-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-elevated overflow-hidden group animate-fade-in">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=200&h=150&fit=crop"
+                            alt="Santorini, Greece" class="w-full h-40 object-cover" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div class="absolute top-3 right-3">
+                            <span class="badge-success">Published</span>
+                        </div>
+                        <div
+                            class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-destination-btn"
+                                data-destination-id="2" data-title="Santorini, Greece" data-slug="santorini-greece"
+                                data-country="Greece" data-region="Europe" data-is-published="true" data-packages="5"
+                                data-image="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=200&h=150&fit=crop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-eye w-4 h-4" />
+                            </button>
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-destination-btn"
+                                data-destination-id="2" data-title="Santorini, Greece" data-slug="santorini-greece"
+                                data-country="Greece" data-region="Europe" data-is-published="true" data-packages="5"
+                                data-image="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=200&h=150&fit=crop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-edit w-4 h-4" />
+                            </button>
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-heading mb-1">Santorini, Greece</h3>
+                        <div class="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-globe w-4 h-4" />
+                            Greece · Europe
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-muted-foreground">5 packages</span>
+                            <button class="text-muted-foreground hover:text-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-elevated overflow-hidden group animate-fade-in">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=200&h=150&fit=crop"
+                            alt="Maldives" class="w-full h-40 object-cover" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div class="absolute top-3 right-3">
+                            <span class="badge-success">Published</span>
+                        </div>
+                        <div
+                            class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-destination-btn"
+                                data-destination-id="3" data-title="Maldives" data-slug="maldives"
+                                data-country="Maldives" data-region="South Asia" data-is-published="true"
+                                data-packages="6"
+                                data-image="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=200&h=150&fit=crop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-eye w-4 h-4" />
+                            </button>
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-destination-btn"
+                                data-destination-id="3" data-title="Maldives" data-slug="maldives"
+                                data-country="Maldives" data-region="South Asia" data-is-published="true"
+                                data-packages="6"
+                                data-image="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=200&h=150&fit=crop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-edit w-4 h-4" />
+                            </button>
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-heading mb-1">Maldives</h3>
+                        <div class="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-globe w-4 h-4" />
+                            Maldives · South Asia
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-muted-foreground">6 packages</span>
+                            <button class="text-muted-foreground hover:text-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-elevated overflow-hidden group animate-fade-in">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=200&h=150&fit=crop"
+                            alt="Tokyo, Japan" class="w-full h-40 object-cover" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div class="absolute top-3 right-3">
+                            <span class="badge-success">Published</span>
+                        </div>
+                        <div
+                            class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-destination-btn"
+                                data-destination-id="4" data-title="Tokyo, Japan" data-slug="tokyo-japan"
+                                data-country="Japan" data-region="East Asia" data-is-published="true" data-packages="7"
+                                data-image="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=200&h=150&fit=crop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-eye w-4 h-4" />
+                            </button>
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-destination-btn"
+                                data-destination-id="4" data-title="Tokyo, Japan" data-slug="tokyo-japan"
+                                data-country="Japan" data-region="East Asia" data-is-published="true" data-packages="7"
+                                data-image="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=200&h=150&fit=crop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-edit w-4 h-4" />
+                            </button>
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-heading mb-1">Tokyo, Japan</h3>
+                        <div class="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-globe w-4 h-4" />
+                            Japan · East Asia
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-muted-foreground">7 packages</span>
+                            <button class="text-muted-foreground hover:text-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-elevated overflow-hidden group animate-fade-in">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=200&h=150&fit=crop"
+                            alt="Swiss Alps" class="w-full h-40 object-cover" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div class="absolute top-3 right-3">
+                            <span class="badge-warning">Draft</span>
+                        </div>
+                        <div
+                            class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-destination-btn"
+                                data-destination-id="5" data-title="Swiss Alps" data-slug="swiss-alps"
+                                data-country="Switzerland" data-region="Europe" data-is-published="false"
+                                data-packages="4"
+                                data-image="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=200&h=150&fit=crop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-eye w-4 h-4" />
+                            </button>
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-destination-btn"
+                                data-destination-id="5" data-title="Swiss Alps" data-slug="swiss-alps"
+                                data-country="Switzerland" data-region="Europe" data-is-published="false"
+                                data-packages="4"
+                                data-image="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=200&h=150&fit=crop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-edit w-4 h-4" />
+                            </button>
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-heading mb-1">Swiss Alps</h3>
+                        <div class="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-globe w-4 h-4" />
+                            Switzerland · Europe
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-muted-foreground">4 packages</span>
+                            <button class="text-muted-foreground hover:text-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-elevated overflow-hidden group animate-fade-in">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=200&h=150&fit=crop"
+                            alt="Machu Picchu" class="w-full h-40 object-cover" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div class="absolute top-3 right-3">
+                            <span class="badge-success">Published</span>
+                        </div>
+                        <div
+                            class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-destination-btn"
+                                data-destination-id="6" data-title="Machu Picchu" data-slug="machu-picchu"
+                                data-country="Peru" data-region="South America" data-is-published="true"
+                                data-packages="3"
+                                data-image="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=200&h=150&fit=crop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-eye w-4 h-4" />
+                            </button>
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-destination-btn"
+                                data-destination-id="6" data-title="Machu Picchu" data-slug="machu-picchu"
+                                data-country="Peru" data-region="South America" data-is-published="true"
+                                data-packages="3"
+                                data-image="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=200&h=150&fit=crop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-edit w-4 h-4" />
+                            </button>
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-heading mb-1">Machu Picchu</h3>
+                        <div class="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-globe w-4 h-4" />
+                            Peru · South America
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-muted-foreground">3 packages</span>
+                            <button class="text-muted-foreground hover:text-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-elevated overflow-hidden group animate-fade-in">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=200&h=150&fit=crop"
+                            alt="Dubai, UAE" class="w-full h-40 object-cover" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div class="absolute top-3 right-3">
+                            <span class="badge-success">Published</span>
+                        </div>
+                        <div
+                            class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-destination-btn"
+                                data-destination-id="7" data-title="Dubai, UAE" data-slug="dubai-uae" data-country="UAE"
+                                data-region="Middle East" data-is-published="true" data-packages="9"
+                                data-image="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=200&h=150&fit=crop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-eye w-4 h-4" />
+                            </button>
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-destination-btn"
+                                data-destination-id="7" data-title="Dubai, UAE" data-slug="dubai-uae" data-country="UAE"
+                                data-region="Middle East" data-is-published="true" data-packages="9"
+                                data-image="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=200&h=150&fit=crop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-edit w-4 h-4" />
+                            </button>
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-heading mb-1">Dubai, UAE</h3>
+                        <div class="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-globe w-4 h-4" />
+                            UAE · Middle East
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-muted-foreground">9 packages</span>
+                            <button class="text-muted-foreground hover:text-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-elevated overflow-hidden group animate-fade-in">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=200&h=150&fit=crop"
+                            alt="Paris, France" class="w-full h-40 object-cover" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div class="absolute top-3 right-3">
+                            <span class="badge-warning">Draft</span>
+                        </div>
+                        <div
+                            class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-destination-btn"
+                                data-destination-id="8" data-title="Paris, France" data-slug="paris-france"
+                                data-country="France" data-region="Europe" data-is-published="false" data-packages="5"
+                                data-image="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=200&h=150&fit=crop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-eye w-4 h-4" />
+                            </button>
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-destination-btn"
+                                data-destination-id="8" data-title="Paris, France" data-slug="paris-france"
+                                data-country="France" data-region="Europe" data-is-published="false" data-packages="5"
+                                data-image="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=200&h=150&fit=crop">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-edit w-4 h-4" />
+                            </button>
+                            <button
+                                class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-heading mb-1">Paris, France</h3>
+                        <div class="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-globe w-4 h-4" />
+                            France · Europe
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-muted-foreground">5 packages</span>
+                            <button class="text-muted-foreground hover:text-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex items-center justify-between">
+                <p class="text-sm text-muted-foreground">
+                    Showing 1-8 of 8 destinations
+                </p>
+                <div class="flex items-center gap-2">
+                    <button class="btn-outline p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-left w-4 h-4">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button class="btn-primary px-3 py-2">1</button>
+                    <button class="btn-outline px-3 py-2">2</button>
+                    <button class="btn-outline p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-right w-4 h-4">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Add/Edit Modal -->
+        <div id="add-edit-destination-modal"
+            class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 hidden">
+            <div class="bg-card rounded-2xl shadow-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto animate-scale-in">
+                <div class="p-6 border-b border-border/30 flex items-center justify-between">
+                    <h2 class="text-xl font-bold text-heading" id="destination-modal-title"></h2>
+                    <button classt="text-muted-foreground hover:text-foreground" id="close-destination-modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-x w-5 h-5">
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-2" for="destination-title">Title</label>
+                        <input type="text" class="input-field" id="destination-title" placeholder="Destination title" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2" for="destination-slug">Slug</label>
+                        <input type="text" class="input-field" id="destination-slug" placeholder="destination-slug" />
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2" for="destination-country">Country</label>
+                            <input type="text" class="input-field" id="destination-country" placeholder="Country" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2" for="destination-region">Region</label>
+                            <input type="text" class="input-field" id="destination-region" placeholder="Region" />
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2" for="destination-summary">Summary</label>
+                        <textarea class="input-field h-24 resize-none" id="destination-summary"
+                            placeholder="Brief description of the destination"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2" for="destination-description">Description</label>
+                        <textarea class="input-field h-32 resize-none" id="destination-description"
+                            placeholder="Detailed description..."></textarea>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2" for="destination-latitude">Latitude</label>
+                            <input type="number" step="0.0000001" class="input-field" id="destination-latitude"
+                                placeholder="0.0000000" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2" for="destination-longitude">Longitude</label>
+                            <input type="number" step="0.0000001" class="input-field" id="destination-longitude"
+                                placeholder="0.0000000" />
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <input type="checkbox" id="destination-published" class="w-4 h-4 accent-primary" />
+                        <label for="destination-published" class="text-sm font-medium">Published</label>
+                    </div>
+                </div>
+                <div class="p-6 border-t border-border/30 flex items-center justify-end gap-3">
+                    <button class="btn-outline" id="cancel-destination-edit">Cancel</button>
+                    <button class="btn-primary" id="save-destination-btn">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const destinationsData = [
+                { id: "1", slug: "bali-indonesia", title: "Bali, Indonesia", country: "Indonesia", region: "Southeast Asia", is_published: true, packages: 8, image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=200&h=150&fit=crop" },
+                { id: "2", slug: "santorini-greece", title: "Santorini, Greece", country: "Greece", region: "Europe", is_published: true, packages: 5, image: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=200&h=150&fit=crop" },
+                { id: "3", slug: "maldives", title: "Maldives", country: "Maldives", region: "South Asia", is_published: true, packages: 6, image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=200&h=150&fit=crop" },
+                { id: "4", slug: "tokyo-japan", title: "Tokyo, Japan", country: "Japan", region: "East Asia", is_published: true, packages: 7, image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=200&h=150&fit=crop" },
+                { id: "5", slug: "swiss-alps", title: "Swiss Alps", country: "Switzerland", region: "Europe", is_published: false, packages: 4, image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=200&h=150&fit=crop" },
+                { id: "6", slug: "machu-picchu", title: "Machu Picchu", country: "Peru", region: "South America", is_published: true, packages: 3, image: "https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=200&h=150&fit=crop" },
+                { id: "7", slug: "dubai-uae", title: "Dubai, UAE", country: "UAE", region: "Middle East", is_published: true, packages: 9, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=200&h=150&fit=crop" },
+                { id: "8", slug: "paris-france", title: "Paris, France", country: "France", region: "Europe", is_published: false, packages: 5, image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=200&h=150&fit=crop" },
+            ];
+
+            const searchInput = document.getElementById('search-destinations');
+            const destinationsGrid = document.getElementById('destinations-grid');
+            const addDestinationBtn = document.getElementById('add-destination-btn');
+            const addEditDestinationModal = document.getElementById('add-edit-destination-modal');
+            const closeDestinationModalBtn = document.getElementById('close-destination-modal');
+            const cancelDestinationEditBtn = document.getElementById('cancel-destination-edit');
+            const saveDestinationBtn = document.getElementById('save-destination-btn');
+            const modalTitle = document.getElementById('destination-modal-title');
+            const inputTitle = document.getElementById('destination-title');
+            const inputSlug = document.getElementById('destination-slug');
+            const inputCountry = document.getElementById('destination-country');
+            const inputRegion = document.getElementById('destination-region');
+            const inputPublished = document.getElementById('destination-published');
+
+            let currentSelectedDestination = null;
+
+            function renderDestinations(filteredData) {
+                destinationsGrid.innerHTML = '';
+                filteredData.forEach(dest => {
+                    const destCard = document.createElement('div');
+                    destCard.className = 'card-elevated overflow-hidden group animate-fade-in';
+                    destCard.innerHTML = `
+                        <div class="relative">
+                            <img src="${dest.image}" alt="${dest.title}" class="w-full h-40 object-cover" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                            <div class="absolute top-3 right-3">
+                                <span class="${dest.is_published ? 'badge-success' : 'badge-warning'}">
+                                    ${dest.is_published ? 'Published' : 'Draft'}
+                                </span>
+                            </div>
+                            <div class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-destination-btn"
+                                        data-destination-id="${dest.id}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye w-4 h-4" />
+                                </button>
+                                <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-destination-btn"
+                                        data-destination-id="${dest.id}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-edit w-4 h-4" />
+                                </button>
+                                <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4" />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-heading mb-1">${dest.title}</h3>
+                            <div class="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe w-4 h-4" />
+                                ${dest.country} · ${dest.region}
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-muted-foreground">${dest.packages} packages</span>
+                                <button class="text-muted-foreground hover:text-foreground">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4" />
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    destinationsGrid.appendChild(destCard);
+                });
+                attachModalTriggerListeners();
+            }
+
+            function filterDestinations() {
+                const query = searchInput.value.toLowerCase();
+                const filtered = destinationsData.filter(d =>
+                    d.title.toLowerCase().includes(query) || d.country.toLowerCase().includes(query)
+                );
+                renderDestinations(filtered);
+            }
+
+            searchInput.addEventListener('input', filterDestinations);
+
+            addDestinationBtn.addEventListener('click', () => {
+                currentSelectedDestination = null;
+                modalTitle.textContent = "Add New Destination";
+                inputTitle.value = '';
+                inputSlug.value = '';
+                inputCountry.value = '';
+                inputRegion.value = '';
+                inputPublished.checked = false;
+                addEditDestinationModal.classList.remove('hidden');
+            });
+
+            function attachModalTriggerListeners() {
+                document.querySelectorAll('.edit-destination-btn').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const destinationId = button.dataset.destinationId;
+                        currentSelectedDestination = destinationsData.find(d => d.id === destinationId);
+                        if (currentSelectedDestination) {
+                            modalTitle.textContent = "Edit Destination";
+                            inputTitle.value = currentSelectedDestination.title;
+                            inputSlug.value = currentSelectedDestination.slug;
+                            inputCountry.value = currentSelectedDestination.country;
+                            inputRegion.value = currentSelectedDestination.region;
+                            inputPublished.checked = currentSelectedDestination.is_published;
+                            addEditDestinationModal.classList.remove('hidden');
+                        }
+                    });
+                });
+            }
+
+
+            closeDestinationModalBtn.addEventListener('click', () => {
+                addEditDestinationModal.classList.add('hidden');
+            });
+
+            cancelDestinationEditBtn.addEventListener('click', () => {
+                addEditDestinationModal.classList.add('hidden');
+            });
+
+            saveDestinationBtn.addEventListener('click', () => {
+                // In a real application, you'd send this data to a backend.
+                // For this static version, we'll just log it.
+                console.log('Saving destination:', {
+                    id: currentSelectedDestination ? currentSelectedDestination.id : 'new-id', // Simulate ID for new ones
+                    title: inputTitle.value,
+                    slug: inputSlug.value,
+                    country: inputCountry.value,
+                    region: inputRegion.value,
+                    is_published: inputPublished.checked
+                });
+                addEditDestinationModal.classList.add('hidden');
+                // Re-render if necessary to show changes
+                filterDestinations();
+            });
+
+            // Initial render
+            renderDestinations(destinationsData);
+        });
+    </script>
+</body>
+
+</html>

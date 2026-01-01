@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Users</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="min-h-screen flex bg-background">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-sidebar fixed h-screen flex flex-col">
+            <div class="p-6 border-b border-sidebar-border">
+                <h1 class="text-xl font-bold text-sidebar-foreground flex items-center gap-2">
+                    <span class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-5 h-5 text-primary-foreground"><path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0Z"/><circle cx="12" cy="8" r="2"/></svg>
+                    </span>
+                    TravelAdmin
+                </h1>
+            </div>
+            <nav class="flex-1 p-4 space-y-1">
+                <a href="dashboard.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard w-5 h-5"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+                    Dashboard
+                </a>
+                <a href="destinations.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-5 h-5"><path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0Z"/><circle cx="12" cy="8" r="2"/></svg>
+                    Destinations
+                </a>
+                <a href="packages.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package w-5 h-5"><path d="m7.5 4.274 1.5 1.5 6-6L21 3v18l-1.5-1.5-6 6L3 21V3l1.5 1.5 6-6Z"/><path d="M14.5 16.5 21 21"/><path d="M9.5 8.5 3 3"/></svg>
+                    Packages
+                </a>
+                <a href="bookings.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check w-5 h-5"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+                    Bookings
+                </a>
+                <a href="stories.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text w-5 h-5"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                    Stories
+                </a>
+                <a href="users.html" class="sidebar-link-active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-5 h-5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Users
+                </a>
+                <a href="analytics.html" class="sidebar-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bar-chart-3 w-5 h-5"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                    Analytics
+                </a>
+            </nav>
+            <div class="p-4 border-t border-sidebar-border">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-sidebar-accent flex items-center justify-center text-sidebar-primary font-semibold">AD</div>
+                    <div>
+                        <p class="text-sm font-medium text-sidebar-foreground">Admin User</p>
+                        <p class="text-xs text-sidebar-muted">admin@travel.com</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 ml-64 p-8">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h1 class="text-2xl font-bold text-heading">Users</h1>
+                    <p class="text-muted-foreground mt-1">Manage registered users</p>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-4 gap-4 mb-6">
+                <div class="stat-card">
+                    <p class="text-sm text-muted-foreground">Total Users</p>
+                    <p class="text-2xl font-bold text-heading">8</p>
+                </div>
+                <div class="stat-card">
+                    <p class="text-sm text-muted-foreground">Active</p>
+                    <p class="text-2xl font-bold text-emerald-600">7</p>
+                </div>
+                <div class="stat-card">
+                    <p class="text-sm text-muted-foreground">Travelers</p>
+                    <p class="text-2xl font-bold text-primary">6</p>
+                </div>
+                <div class="stat-card">
+                    <p class="text-sm text-muted-foreground">Admins</p>
+                    <p class="text-2xl font-bold text-violet-600">1</p>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex items-center gap-4 mb-6">
+                <div class="flex-1 relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-muted"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <input type="text" placeholder="Search users..." class="input-field pl-10" id="search-users"/>
+                </div>
+                <button class="btn-outline flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-filter w-4 h-4"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                    Filters
+                </button>
+            </div>
+
+            <!-- Users Table -->
+            <div class="table-container">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-secondary/50">
+                            <tr>
+                                <th class="text-left py-3 px-6 text-xs font-semibold text-muted-foreground uppercase tracking-wider">User</th>
+                                <th class="text-left py-3 px-6 text-xs font-semibold text-muted-foreground uppercase tracking-wider">Email</th>
+                                <th class="text-left py-3 px-6 text-xs font-semibold text-muted-foreground uppercase tracking-wider">Role</th>
+                                <th class="text-left py-3 px-6 text-xs font-semibold text-muted-foreground uppercase tracking-wider">Bookings</th>
+                                <th class="text-left py-3 px-6 text-xs font-semibold text-muted-foreground uppercase tracking-wider">Joined</th>
+                                <th class="text-left py-3 px-6 text-xs font-semibold text-muted-foreground uppercase tracking-wider">Status</th>
+                                <th class="text-left py-3 px-6 text-xs font-semibold text-muted-foreground uppercase tracking-wider">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-border/30" id="users-table-body">
+                            <!-- Hardcoded users data -->
+                            <tr class="hover:bg-secondary/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">SJ</div>
+                                        <span class="font-medium">Sarah Johnson</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">sarah.johnson@email.com</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4 h-4 text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                        <span class="text-sm font-medium">Traveler</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm">5</td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">2023-08-15</td>
+                                <td class="py-4 px-6">
+                                    <span class="badge-success">Active</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <button class="p-2 hover:bg-secondary rounded-lg transition-colors view-user-btn"
+                                            data-user-id="1"
+                                            data-firstname="Sarah"
+                                            data-lastname="Johnson"
+                                            data-email="sarah.johnson@email.com"
+                                            data-is-active="true"
+                                            data-role="Traveler"
+                                            data-bookings="5"
+                                            data-created-at="2023-08-15">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4 text-muted-foreground"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-secondary/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">MC</div>
+                                        <span class="font-medium">Mike Chen</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">mike.chen@email.com</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4 h-4 text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                        <span class="text-sm font-medium">Traveler</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm">3</td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">2023-09-20</td>
+                                <td class="py-4 px-6">
+                                    <span class="badge-success">Active</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <button class="p-2 hover:bg-secondary rounded-lg transition-colors view-user-btn"
+                                            data-user-id="2"
+                                            data-firstname="Mike"
+                                            data-lastname="Chen"
+                                            data-email="mike.chen@email.com"
+                                            data-is-active="true"
+                                            data-role="Traveler"
+                                            data-bookings="3"
+                                            data-created-at="2023-09-20">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4 text-muted-foreground"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-secondary/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">EW</div>
+                                        <span class="font-medium">Emma Wilson</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">emma.wilson@email.com</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4 h-4 text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                        <span class="text-sm font-medium">Traveler</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm">8</td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">2023-06-10</td>
+                                <td class="py-4 px-6">
+                                    <span class="badge-success">Active</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <button class="p-2 hover:bg-secondary rounded-lg transition-colors view-user-btn"
+                                            data-user-id="3"
+                                            data-firstname="Emma"
+                                            data-lastname="Wilson"
+                                            data-email="emma.wilson@email.com"
+                                            data-is-active="true"
+                                            data-role="Traveler"
+                                            data-bookings="8"
+                                            data-created-at="2023-06-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4 text-muted-foreground"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-secondary/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">JB</div>
+                                        <span class="font-medium">James Brown</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">james.brown@email.com</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4 h-4 text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                        <span class="text-sm font-medium">Traveler</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm">2</td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">2023-10-05</td>
+                                <td class="py-4 px-6">
+                                    <span class="badge-error">Inactive</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <button class="p-2 hover:bg-secondary rounded-lg transition-colors view-user-btn"
+                                            data-user-id="4"
+                                            data-firstname="James"
+                                            data-lastname="Brown"
+                                            data-email="james.brown@email.com"
+                                            data-is-active="false"
+                                            data-role="Traveler"
+                                            data-bookings="2"
+                                            data-created-at="2023-10-05">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4 text-muted-foreground"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-secondary/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">LP</div>
+                                        <span class="font-medium">Lisa Park</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">lisa.park@email.com</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4 h-4 text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                        <span class="text-sm font-medium">Traveler</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm">12</td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">2023-04-22</td>
+                                <td class="py-4 px-6">
+                                    <span class="badge-success">Active</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <button class="p-2 hover:bg-secondary rounded-lg transition-colors view-user-btn"
+                                            data-user-id="5"
+                                            data-firstname="Lisa"
+                                            data-lastname="Park"
+                                            data-email="lisa.park@email.com"
+                                            data-is-active="true"
+                                            data-role="Traveler"
+                                            data-bookings="12"
+                                            data-created-at="2023-04-22">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4 text-muted-foreground"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-secondary/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">AU</div>
+                                        <span class="font-medium">Admin User</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">admin@travel.com</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4 h-4 text-violet-600"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                        <span class="text-sm font-medium">Admin</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm">0</td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">2023-01-01</td>
+                                <td class="py-4 px-6">
+                                    <span class="badge-success">Active</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <button class="p-2 hover:bg-secondary rounded-lg transition-colors view-user-btn"
+                                            data-user-id="6"
+                                            data-firstname="Admin"
+                                            data-lastname="User"
+                                            data-email="admin@travel.com"
+                                            data-is-active="true"
+                                            data-role="Admin"
+                                            data-bookings="0"
+                                            data-created-at="2023-01-01">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4 text-muted-foreground"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-secondary/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">DK</div>
+                                        <span class="font-medium">David Kim</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">david.kim@email.com</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4 h-4 text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                        <span class="text-sm font-medium">Traveler</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm">4</td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">2023-11-15</td>
+                                <td class="py-4 px-6">
+                                    <span class="badge-success">Active</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <button class="p-2 hover:bg-secondary rounded-lg transition-colors view-user-btn"
+                                            data-user-id="7"
+                                            data-firstname="David"
+                                            data-lastname="Kim"
+                                            data-email="david.kim@email.com"
+                                            data-is-active="true"
+                                            data-role="Traveler"
+                                            data-bookings="4"
+                                            data-created-at="2023-11-15">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4 text-muted-foreground"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-secondary/30 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">AL</div>
+                                        <span class="font-medium">Anna Lee</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">anna.lee@email.com</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4 h-4 text-amber-600"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                        <span class="text-sm font-medium">Editor</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 text-sm">0</td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">2023-07-08</td>
+                                <td class="py-4 px-6">
+                                    <span class="badge-success">Active</span>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <button class="p-2 hover:bg-secondary rounded-lg transition-colors view-user-btn"
+                                            data-user-id="8"
+                                            data-firstname="Anna"
+                                            data-lastname="Lee"
+                                            data-email="anna.lee@email.com"
+                                            data-is-active="true"
+                                            data-role="Editor"
+                                            data-bookings="0"
+                                            data-created-at="2023-07-08">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4 text-muted-foreground"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <!-- View Modal -->
+        <div id="view-user-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 hidden">
+            <div class="bg-card rounded-2xl shadow-lg w-full max-w-md animate-scale-in">
+                <div class="p-6 border-b border-border/30 flex items-center justify-between">
+                    <h2 class="text-xl font-bold text-heading">User Details</h2>
+                    <button class="text-muted-foreground hover:text-foreground" id="close-user-modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x w-5 h-5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xl font-bold" id="modal-user-initials"></div>
+                        <div>
+                            <h3 class="font-semibold text-heading text-lg" id="modal-user-name"></h3>
+                            <p class="text-sm text-muted-foreground" id="modal-user-email"></p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between py-2 border-b border-border/30">
+                            <div class="flex items-center gap-2 text-muted-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4 h-4"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <span class="text-sm">Role</span>
+                            </div>
+                            <span class="font-medium" id="modal-user-role"></span>
+                        </div>
+                        <div class="flex items-center justify-between py-2 border-b border-border/30">
+                            <div class="flex items-center gap-2 text-muted-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check w-4 h-4"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+                                <span class="text-sm">Bookings</span>
+                            </div>
+                            <span class="font-medium" id="modal-user-bookings"></span>
+                        </div>
+                        <div class="flex items-center justify-between py-2 border-b border-border/30">
+                            <div class="flex items-center gap-2 text-muted-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-4 h-4"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                <span class="text-sm">Joined</span>
+                            </div>
+                            <span class="font-medium" id="modal-user-joined"></span>
+                        </div>
+                        <div class="flex items-center justify-between py-2">
+                            <span class="text-sm text-muted-foreground">Status</span>
+                            <span id="modal-user-status"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 border-t border-border/30 flex items-center justify-between">
+                    <button class="btn-outline flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail w-4 h-4"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        Send Email
+                    </button>
+                    <div class="flex gap-2" id="modal-user-actions">
+                        <!-- Dynamic buttons will be injected here by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const usersData = [
+                { id: "1", firstname: "Sarah", lastname: "Johnson", email: "sarah.johnson@email.com", avatar_url: null, is_active: true, role: "Traveler", bookings: 5, created_at: "2023-08-15" },
+                { id: "2", firstname: "Mike", lastname: "Chen", email: "mike.chen@email.com", avatar_url: null, is_active: true, role: "Traveler", bookings: 3, created_at: "2023-09-20" },
+                { id: "3", firstname: "Emma", lastname: "Wilson", email: "emma.wilson@email.com", avatar_url: null, is_active: true, role: "Traveler", bookings: 8, created_at: "2023-06-10" },
+                { id: "4", firstname: "James", lastname: "Brown", email: "james.brown@email.com", avatar_url: null, is_active: false, role: "Traveler", bookings: 2, created_at: "2023-10-05" },
+                { id: "5", firstname: "Lisa", lastname: "Park", email: "lisa.park@email.com", avatar_url: null, is_active: true, role: "Traveler", bookings: 12, created_at: "2023-04-22" },
+                { id: "6", firstname: "Admin", lastname: "User", email: "admin@travel.com", avatar_url: null, is_active: true, role: "Admin", bookings: 0, created_at: "2023-01-01" },
+                { id: "7", firstname: "David", lastname: "Kim", email: "david.kim@email.com", avatar_url: null, is_active: true, role: "Traveler", bookings: 4, created_at: "2023-11-15" },
+                { id: "8", firstname: "Anna", lastname: "Lee", email: "anna.lee@email.com", avatar_url: null, is_active: true, role: "Editor", bookings: 0, created_at: "2023-07-08" },
+            ];
+
+            const searchInput = document.getElementById('search-users');
+            const usersTableBody = document.getElementById('users-table-body');
+            const viewUserModal = document.getElementById('view-user-modal');
+            const closeUserModalBtn = document.getElementById('close-user-modal');
+
+            const modalUserInitials = document.getElementById('modal-user-initials');
+            const modalUserName = document.getElementById('modal-user-name');
+            const modalUserEmail = document.getElementById('modal-user-email');
+            const modalUserRole = document.getElementById('modal-user-role');
+            const modalUserBookings = document.getElementById('modal-user-bookings');
+            const modalUserJoined = document.getElementById('modal-user-joined');
+            const modalUserStatus = document.getElementById('modal-user-status');
+            const modalUserActions = document.getElementById('modal-user-actions');
+
+            function getInitials(firstname, lastname) {
+                return `${firstname.charAt(0)}${lastname.charAt(0)}`.toUpperCase();
+            }
+
+            function renderUsers(filteredData) {
+                usersTableBody.innerHTML = '';
+                filteredData.forEach(user => {
+                    const row = document.createElement('tr');
+                    row.className = 'hover:bg-secondary/30 transition-colors';
+                    row.innerHTML = `
+                        <td class="py-4 px-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
+                                    ${getInitials(user.firstname, user.lastname)}
+                                </div>
+                                <span class="font-medium">${user.firstname} ${user.lastname}</span>
+                            </div>
+                        </td>
+                        <td class="py-4 px-6 text-sm text-muted-foreground">${user.email}</td>
+                        <td class="py-4 px-6">
+                            <div class="flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4 h-4 ${user.role === "Admin" ? "text-violet-600" : user.role === "Editor" ? "text-amber-600" : "text-primary"}"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <span class="text-sm font-medium">${user.role}</span>
+                            </div>
+                        </td>
+                        <td class="py-4 px-6 text-sm">${user.bookings}</td>
+                        <td class="py-4 px-6 text-sm text-muted-foreground">${user.created_at}</td>
+                        <td class="py-4 px-6">
+                            <span class="${user.is_active ? "badge-success" : "badge-error"}">
+                                ${user.is_active ? "Active" : "Inactive"}
+                            </span>
+                        </td>
+                        <td class="py-4 px-6">
+                            <button class="p-2 hover:bg-secondary rounded-lg transition-colors view-user-btn"
+                                    data-user-id="${user.id}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-more-vertical w-4 h-4 text-muted-foreground"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                            </button>
+                        </td>
+                    `;
+                    usersTableBody.appendChild(row);
+                });
+                attachModalTriggerListeners();
+            }
+
+            function filterUsers() {
+                const query = searchInput.value.toLowerCase();
+                const filtered = usersData.filter(u =>
+                    `${u.firstname} ${u.lastname}`.toLowerCase().includes(query) ||
+                    u.email.toLowerCase().includes(query)
+                );
+                renderUsers(filtered);
+            }
+
+            searchInput.addEventListener('input', filterUsers);
+
+            function attachModalTriggerListeners() {
+                document.querySelectorAll('.view-user-btn').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const userId = button.dataset.userId;
+                        const selectedUser = usersData.find(u => u.id === userId);
+
+                        if (selectedUser) {
+                            modalUserInitials.textContent = getInitials(selectedUser.firstname, selectedUser.lastname);
+                            modalUserName.textContent = `${selectedUser.firstname} ${selectedUser.lastname}`;
+                            modalUserEmail.textContent = selectedUser.email;
+                            modalUserRole.textContent = selectedUser.role;
+                            modalUserBookings.textContent = selectedUser.bookings;
+                            modalUserJoined.textContent = selectedUser.created_at;
+
+                            modalUserStatus.className = ''; // Clear previous classes
+                            modalUserStatus.classList.add(
+                                selectedUser.is_active ? "badge-success" : "badge-error"
+                            );
+                            modalUserStatus.textContent = selectedUser.is_active ? "Active" : "Inactive";
+
+                            modalUserActions.innerHTML = '';
+                            if (selectedUser.is_active) {
+                                modalUserActions.innerHTML = `<button class="btn-outline text-destructive border-destructive hover:bg-destructive/10">Deactivate</button>`;
+                            } else {
+                                modalUserActions.innerHTML = `<button class="btn-primary">Activate</button>`;
+                            }
+
+                            viewUserModal.classList.remove('hidden');
+                        }
+                    });
+                });
+            }
+
+            closeUserModalBtn.addEventListener('click', () => {
+                viewUserModal.classList.add('hidden');
+            });
+
+            // Initial render
+            renderUsers(usersData);
+        });
+    </script>
+</body>
+</html>
