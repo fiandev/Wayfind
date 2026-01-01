@@ -1,437 +1,1256 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Stories</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="../favicon.ico">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stories - Wayfind</title>
+    <meta name="description" content="Wayfind" />
+    <meta name="author" content="Fiandev" />
+    <meta name="keywords" content="Wayfind" />
+
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Tailwind CSS CDN untuk memfungsikan class utility -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
     <div class="min-h-screen flex bg-background">
-        <!-- Sidebar -->
-        <aside class="w-64 bg-sidebar fixed h-screen flex flex-col">
-            <div class="p-6 border-b border-sidebar-border">
-                <h1 class="text-xl font-bold text-sidebar-foreground flex items-center gap-2">
-                    <span class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-5 h-5 text-primary-foreground"><path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0Z"/><circle cx="12" cy="8" r="2"/></svg>
-                    </span>
-                    TravelAdmin
-                </h1>
-            </div>
-            <nav class="flex-1 p-4 space-y-1">
-                <a href="dashboard.html" class="sidebar-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard w-5 h-5"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
-                    Dashboard
-                </a>
-                <a href="destinations.html" class="sidebar-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-5 h-5"><path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0Z"/><circle cx="12" cy="8" r="2"/></svg>
-                    Destinations
-                </a>
-                <a href="packages.html" class="sidebar-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package w-5 h-5"><path d="m7.5 4.274 1.5 1.5 6-6L21 3v18l-1.5-1.5-6 6L3 21V3l1.5 1.5 6-6Z"/><path d="M14.5 16.5 21 21"/><path d="M9.5 8.5 3 3"/></svg>
-                    Packages
-                </a>
-                <a href="bookings.html" class="sidebar-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check w-5 h-5"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
-                    Bookings
-                </a>
-                <a href="stories.html" class="sidebar-link-active">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text w-5 h-5"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-                    Stories
-                </a>
-                <a href="users.html" class="sidebar-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-5 h-5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    Users
-                </a>
-                <a href="analytics.html" class="sidebar-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bar-chart-3 w-5 h-5"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
-                    Analytics
-                </a>
-            </nav>
-            <div class="p-4 border-t border-sidebar-border">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-sidebar-accent flex items-center justify-center text-sidebar-primary font-semibold">AD</div>
-                    <div>
-                        <p class="text-sm font-medium text-sidebar-foreground">Admin User</p>
-                        <p class="text-xs text-sidebar-muted">admin@travel.com</p>
-                    </div>
-                </div>
-            </div>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="flex-1 ml-64 p-8">
-            <div class="flex items-center justify-between mb-8">
-                <div>
-                    <h1 class="text-2xl font-bold text-heading">Stories</h1>
-                    <p class="text-muted-foreground mt-1">Manage blog posts and travel stories</p>
-                </div>
-                <button class="btn-primary flex items-center gap-2" id="new-story-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus w-4 h-4"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-                    New Story
-                </button>
-            </div>
-
-            <!-- Filters -->
-            <div class="flex items-center gap-4 mb-6">
-                <div class="flex-1 relative">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-muted"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                    <input type="text" placeholder="Search stories..." class="input-field pl-10" id="search-stories"/>
-                </div>
-                <button class="btn-outline flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-filter w-4 h-4"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
-                    Filters
-                </button>
-            </div>
-
-            <!-- Stories Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="stories-grid">
-                <!-- Hardcoded stories data -->
-                <div class="card-elevated overflow-hidden group animate-fade-in">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=300&h=200&fit=crop" alt="10 Hidden Gems in Bali You Must Visit" class="w-full h-48 object-cover" />
-                        <div class="absolute top-3 left-3 flex gap-2">
-                            <span class="px-2 py-1 rounded-full text-xs font-medium text-white" style="background-color: #10B981;">Adventure</span>
-                            <span class="badge-info">Featured</span>
-                        </div>
-                        <div class="absolute top-3 right-3">
-                            <span class="badge-success">Published</span>
-                        </div>
-                        <div class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-story-btn"
-                                    data-story-id="1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye w-4 h-4" />
-                            </button>
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-story-btn"
-                                    data-story-id="1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-edit w-4 h-4" />
-                            </button>
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-semibold text-heading mb-2 line-clamp-2">10 Hidden Gems in Bali You Must Visit</h3>
-                        <p class="text-sm text-muted-foreground mb-3 line-clamp-2">Discover the lesser-known paradises of Bali that most tourists miss.</p>
-                        <div class="flex items-center justify-between text-xs text-muted-foreground">
-                            <div class="flex items-center gap-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-3 h-3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                8 min read
-                            </div>
-                            <span>2024-01-15</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-elevated overflow-hidden group animate-fade-in">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=300&h=200&fit=crop" alt="A Complete Guide to Japanese Culture" class="w-full h-48 object-cover" />
-                        <div class="absolute top-3 left-3 flex gap-2">
-                            <span class="px-2 py-1 rounded-full text-xs font-medium text-white" style="background-color: #8B5CF6;">Culture</span>
-                        </div>
-                        <div class="absolute top-3 right-3">
-                            <span class="badge-success">Published</span>
-                        </div>
-                        <div class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-story-btn"
-                                    data-story-id="2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye w-4 h-4" />
-                            </button>
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-story-btn"
-                                    data-story-id="2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-edit w-4 h-4" />
-                            </button>
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-semibold text-heading mb-2 line-clamp-2">A Complete Guide to Japanese Culture</h3>
-                        <p class="text-sm text-muted-foreground mb-3 line-clamp-2">Everything you need to know about Japanese traditions and customs.</p>
-                        <div class="flex items-center justify-between text-xs text-muted-foreground">
-                            <div class="flex items-center gap-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-3 h-3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                12 min read
-                            </div>
-                            <span>2024-01-14</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-elevated overflow-hidden group animate-fade-in">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=300&h=200&fit=crop" alt="Best Street Food in Bangkok" class="w-full h-48 object-cover" />
-                        <div class="absolute top-3 left-3 flex gap-2">
-                            <span class="px-2 py-1 rounded-full text-xs font-medium text-white" style="background-color: #F59E0B;">Food & Drink</span>
-                            <span class="badge-info">Featured</span>
-                        </div>
-                        <div class="absolute top-3 right-3">
-                            <span class="badge-success">Published</span>
-                        </div>
-                        <div class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-story-btn"
-                                    data-story-id="3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye w-4 h-4" />
-                            </button>
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-story-btn"
-                                    data-story-id="3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-edit w-4 h-4" />
-                            </button>
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-semibold text-heading mb-2 line-clamp-2">Best Street Food in Bangkok</h3>
-                        <p class="text-sm text-muted-foreground mb-3 line-clamp-2">A foodie journey through the vibrant streets of Bangkok.</p>
-                        <div class="flex items-center justify-between text-xs text-muted-foreground">
-                            <div class="flex items-center gap-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-3 h-3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                6 min read
-                            </div>
-                            <span>2024-01-12</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-elevated overflow-hidden group animate-fade-in">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=300&h=200&fit=crop" alt="Chasing Northern Lights in Iceland" class="w-full h-48 object-cover" />
-                        <div class="absolute top-3 left-3 flex gap-2">
-                            <span class="px-2 py-1 rounded-full text-xs font-medium text-white" style="background-color: #06B6D4;">Nature</span>
-                        </div>
-                        <div class="absolute top-3 right-3">
-                            <span class="badge-success">Published</span>
-                        </div>
-                        <div class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-story-btn"
-                                    data-story-id="4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye w-4 h-4" />
-                            </button>
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-story-btn"
-                                    data-story-id="4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-edit w-4 h-4" />
-                            </button>
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-semibold text-heading mb-2 line-clamp-2">Chasing Northern Lights in Iceland</h3>
-                        <p class="text-sm text-muted-foreground mb-3 line-clamp-2">Your ultimate guide to witnessing the magical aurora borealis.</p>
-                        <div class="flex items-center justify-between text-xs text-muted-foreground">
-                            <div class="flex items-center gap-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-3 h-3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                10 min read
-                            </div>
-                            <span>2024-01-10</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-elevated overflow-hidden group animate-fade-in">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=200&fit=crop" alt="Essential Packing Tips for Every Traveler" class="w-full h-48 object-cover" />
-                        <div class="absolute top-3 left-3 flex gap-2">
-                            <span class="px-2 py-1 rounded-full text-xs font-medium text-white" style="background-color: #EC4899;">Tips & Guides</span>
-                        </div>
-                        <div class="absolute top-3 right-3">
-                            <span class="badge-warning">Draft</span>
-                        </div>
-                        <div class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-story-btn"
-                                    data-story-id="5">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye w-4 h-4" />
-                            </button>
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-story-btn"
-                                    data-story-id="5">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-edit w-4 h-4" />
-                            </button>
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-semibold text-heading mb-2 line-clamp-2">Essential Packing Tips for Every Traveler</h3>
-                        <p class="text-sm text-muted-foreground mb-3 line-clamp-2">Learn how to pack smart and light for any destination.</p>
-                        <div class="flex items-center justify-between text-xs text-muted-foreground">
-                            <div class="flex items-center gap-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-3 h-3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                5 min read
-                            </div>
-                            <!-- <span>2024-01-08</span> - published_at is null -->
-                        </div>
-                    </div>
-                </div>
-                <div class="card-elevated overflow-hidden group animate-fade-in">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=300&h=200&fit=crop" alt="Ultimate Safari Adventure in Kenya" class="w-full h-48 object-cover" />
-                        <div class="absolute top-3 left-3 flex gap-2">
-                            <span class="px-2 py-1 rounded-full text-xs font-medium text-white" style="background-color: #10B981;">Adventure</span>
-                        </div>
-                        <div class="absolute top-3 right-3">
-                            <span class="badge-success">Published</span>
-                        </div>
-                        <div class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-story-btn"
-                                    data-story-id="6">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye w-4 h-4" />
-                            </button>
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-story-btn"
-                                    data-story-id="6">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-edit w-4 h-4" />
-                            </button>
-                            <button class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2 w-4 h-4" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-semibold text-heading mb-2 line-clamp-2">Ultimate Safari Adventure in Kenya</h3>
-                        <p class="text-sm text-muted-foreground mb-3 line-clamp-2">Experience the wild beauty of African wildlife up close.</p>
-                        <div class="flex items-center justify-between text-xs text-muted-foreground">
-                            <div class="flex items-center gap-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-3 h-3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                9 min read
-                            </div>
-                            <span>2024-01-08</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <!-- Add/Edit Modal -->
-        <div id="add-edit-story-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 hidden">
-            <div class="bg-card rounded-2xl shadow-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto animate-scale-in">
-                <div class="p-6 border-b border-border/30 flex items-center justify-between">
-                    <h2 class="text-xl font-bold text-heading" id="story-modal-title"></h2>
-                    <button class="text-muted-foreground hover:text-foreground" id="close-story-modal">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x w-5 h-5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                    </button>
-                </div>
-                <div class="p-6 space-y-4">
-                    <div>
-                        <label class="block text-sm font-medium mb-2" for="story-title">Title</label>
-                        <input type="text" class="input-field" id="story-title" placeholder="Story title" />
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2" for="story-slug">Slug</label>
-                        <input type="text" class="input-field" id="story-slug" placeholder="story-slug" />
-                    </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-sm font-medium mb-2" for="story-category">Category</label>
-                            <div class="relative">
-                                <select class="input-field appearance-none" id="story-category">
-                                    <option value="">Select category</option>
-                                    <option value="1">Adventure</option>
-                                    <option value="2">Culture</option>
-                                    <option value="3">Food & Drink</option>
-                                    <option value="4">Nature</option>
-                                    <option value="5">Tips & Guides</option>
-                                </select>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-muted pointer-events-none"><path d="m6 9 6 6 6-6"/></svg>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2" for="story-reading-time">Reading Time (min)</label>
-                            <input type="number" class="input-field" id="story-reading-time" placeholder="5" />
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2" for="story-excerpt">Excerpt</label>
-                        <textarea class="input-field h-20 resize-none" id="story-excerpt" placeholder="Brief summary of the story"></textarea>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2" for="story-content">Content</label>
-                        <textarea class="input-field h-40 resize-none" id="story-content" placeholder="Write your story content here..."></textarea>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2" for="story-image-url">Featured Image URL</label>
-                        <input type="text" class="input-field" id="story-image-url" placeholder="https://..." />
-                    </div>
-                    <div class="flex items-center gap-6">
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" id="story-published" class="w-4 h-4 accent-primary" />
-                            <label for="story-published" class="text-sm font-medium">Published</label>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <input type="checkbox" id="story-featured" class="w-4 h-4 accent-primary" />
-                            <label for="story-featured" class="text-sm font-medium">Featured</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-6 border-t border-border/30 flex items-center justify-end gap-3">
-                    <button class="btn-outline" id="cancel-story-edit">Cancel</button>
-                    <button class="btn-primary" id="save-story-btn">Save Story</button>
-                </div>
-            </div>
+      <!-- Sidebar -->
+      <aside class="w-64 bg-sidebar fixed h-screen flex flex-col">
+        <div class="p-6 border-b border-sidebar-border">
+          <h1
+            class="text-xl font-bold text-sidebar-foreground flex items-center gap-2"
+          >
+            <span
+              class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-map-pin w-5 h-5 text-primary-foreground"
+              >
+                <path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0Z" />
+                <circle cx="12" cy="8" r="2" />
+              </svg>
+            </span>
+            Wayfind
+          </h1>
         </div>
+        <nav class="flex-1 p-4 space-y-1">
+          <a href="dashboard.html" class="sidebar-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-layout-dashboard w-5 h-5"
+            >
+              <rect width="7" height="9" x="3" y="3" rx="1" />
+              <rect width="7" height="5" x="14" y="3" rx="1" />
+              <rect width="7" height="9" x="14" y="12" rx="1" />
+              <rect width="7" height="5" x="3" y="16" rx="1" />
+            </svg>
+            Dashboard
+          </a>
+          <a href="destinations.html" class="sidebar-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-map-pin w-5 h-5"
+            >
+              <path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0Z" />
+              <circle cx="12" cy="8" r="2" />
+            </svg>
+            Destinations
+          </a>
+          <a href="packages.html" class="sidebar-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-package w-5 h-5"
+            >
+              <path
+                d="m7.5 4.274 1.5 1.5 6-6L21 3v18l-1.5-1.5-6 6L3 21V3l1.5 1.5 6-6Z"
+              />
+              <path d="M14.5 16.5 21 21" />
+              <path d="M9.5 8.5 3 3" />
+            </svg>
+            Packages
+          </a>
+          <a href="bookings.html" class="sidebar-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-calendar-check w-5 h-5"
+            >
+              <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+              <line x1="16" x2="16" y1="2" y2="6" />
+              <line x1="8" x2="8" y1="2" y2="6" />
+              <line x1="3" x2="21" y1="10" y2="10" />
+              <path d="m9 16 2 2 4-4" />
+            </svg>
+            Bookings
+          </a>
+          <a href="stories.html" class="sidebar-link-active">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-file-text w-5 h-5"
+            >
+              <path
+                d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+              />
+              <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+              <path d="M10 9H8" />
+              <path d="M16 13H8" />
+              <path d="M16 17H8" />
+            </svg>
+            Stories
+          </a>
+          <a href="users.html" class="sidebar-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-users w-5 h-5"
+            >
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            Users
+          </a>
+          <a href="analytics.html" class="sidebar-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-bar-chart-3 w-5 h-5"
+            >
+              <path d="M3 3v18h18" />
+              <path d="M18 17V9" />
+              <path d="M13 17V5" />
+              <path d="M8 17v-3" />
+            </svg>
+            Analytics
+          </a>
+        </nav>
+        <div class="p-4 border-t border-sidebar-border">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-full bg-sidebar-accent flex items-center justify-center text-sidebar-primary font-semibold"
+            >
+              AD
+            </div>
+            <div>
+              <p class="text-sm font-medium text-sidebar-foreground">
+                Admin User
+              </p>
+              <p class="text-xs text-sidebar-muted">admin@travel.com</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 ml-64 p-8">
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <h1 class="text-2xl font-bold text-heading">Stories</h1>
+            <p class="text-muted-foreground mt-1">
+              Manage blog posts and travel stories
+            </p>
+          </div>
+          <button
+            class="btn-primary flex items-center gap-2"
+            id="new-story-btn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-plus w-4 h-4"
+            >
+              <path d="M12 5v14" />
+              <path d="M5 12h14" />
+            </svg>
+            New Story
+          </button>
+        </div>
+
+        <!-- Filters -->
+        <div class="flex items-center gap-4 mb-6">
+          <div class="flex-1 relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-search w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-muted"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+            <input
+              type="text"
+              placeholder="Search stories..."
+              class="input-field pl-10"
+              id="search-stories"
+            />
+          </div>
+          <button class="btn-outline flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-filter w-4 h-4"
+            >
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+            </svg>
+            Filters
+          </button>
+        </div>
+
+        <!-- Stories Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          id="stories-grid"
+        >
+          <!-- Hardcoded stories data -->
+          <div class="card-elevated overflow-hidden group animate-fade-in">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=300&h=200&fit=crop"
+                alt="10 Hidden Gems in Bali You Must Visit"
+                class="w-full h-48 object-cover"
+              />
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span
+                  class="px-2 py-1 rounded-full text-xs font-medium text-white"
+                  style="background-color: #10b981"
+                  >Adventure</span
+                >
+                <span class="badge-info">Featured</span>
+              </div>
+              <div class="absolute top-3 right-3">
+                <span class="badge-success">Published</span>
+              </div>
+              <div
+                class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-story-btn"
+                  data-story-id="1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-eye w-4 h-4"
+                  />
+                </button>
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-story-btn"
+                  data-story-id="1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-edit w-4 h-4"
+                  />
+                </button>
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-trash-2 w-4 h-4"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-heading mb-2 line-clamp-2">
+                10 Hidden Gems in Bali You Must Visit
+              </h3>
+              <p class="text-sm text-muted-foreground mb-3 line-clamp-2">
+                Discover the lesser-known paradises of Bali that most tourists
+                miss.
+              </p>
+              <div
+                class="flex items-center justify-between text-xs text-muted-foreground"
+              >
+                <div class="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-clock w-3 h-3"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  8 min read
+                </div>
+                <span>2024-01-15</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-elevated overflow-hidden group animate-fade-in">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=300&h=200&fit=crop"
+                alt="A Complete Guide to Japanese Culture"
+                class="w-full h-48 object-cover"
+              />
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span
+                  class="px-2 py-1 rounded-full text-xs font-medium text-white"
+                  style="background-color: #8b5cf6"
+                  >Culture</span
+                >
+              </div>
+              <div class="absolute top-3 right-3">
+                <span class="badge-success">Published</span>
+              </div>
+              <div
+                class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-story-btn"
+                  data-story-id="2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-eye w-4 h-4"
+                  />
+                </button>
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-story-btn"
+                  data-story-id="2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-edit w-4 h-4"
+                  />
+                </button>
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-trash-2 w-4 h-4"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-heading mb-2 line-clamp-2">
+                A Complete Guide to Japanese Culture
+              </h3>
+              <p class="text-sm text-muted-foreground mb-3 line-clamp-2">
+                Everything you need to know about Japanese traditions and
+                customs.
+              </p>
+              <div
+                class="flex items-center justify-between text-xs text-muted-foreground"
+              >
+                <div class="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-clock w-3 h-3"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  12 min read
+                </div>
+                <span>2024-01-14</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-elevated overflow-hidden group animate-fade-in">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=300&h=200&fit=crop"
+                alt="Best Street Food in Bangkok"
+                class="w-full h-48 object-cover"
+              />
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span
+                  class="px-2 py-1 rounded-full text-xs font-medium text-white"
+                  style="background-color: #f59e0b"
+                  >Food & Drink</span
+                >
+                <span class="badge-info">Featured</span>
+              </div>
+              <div class="absolute top-3 right-3">
+                <span class="badge-success">Published</span>
+              </div>
+              <div
+                class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-story-btn"
+                  data-story-id="3"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-eye w-4 h-4"
+                  />
+                </button>
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-story-btn"
+                  data-story-id="3"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-edit w-4 h-4"
+                  />
+                </button>
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-trash-2 w-4 h-4"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-heading mb-2 line-clamp-2">
+                Best Street Food in Bangkok
+              </h3>
+              <p class="text-sm text-muted-foreground mb-3 line-clamp-2">
+                A foodie journey through the vibrant streets of Bangkok.
+              </p>
+              <div
+                class="flex items-center justify-between text-xs text-muted-foreground"
+              >
+                <div class="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-clock w-3 h-3"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  6 min read
+                </div>
+                <span>2024-01-12</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-elevated overflow-hidden group animate-fade-in">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=300&h=200&fit=crop"
+                alt="Chasing Northern Lights in Iceland"
+                class="w-full h-48 object-cover"
+              />
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span
+                  class="px-2 py-1 rounded-full text-xs font-medium text-white"
+                  style="background-color: #06b6d4"
+                  >Nature</span
+                >
+              </div>
+              <div class="absolute top-3 right-3">
+                <span class="badge-success">Published</span>
+              </div>
+              <div
+                class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-story-btn"
+                  data-story-id="4"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-eye w-4 h-4"
+                  />
+                </button>
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-story-btn"
+                  data-story-id="4"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-edit w-4 h-4"
+                  />
+                </button>
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-trash-2 w-4 h-4"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-heading mb-2 line-clamp-2">
+                Chasing Northern Lights in Iceland
+              </h3>
+              <p class="text-sm text-muted-foreground mb-3 line-clamp-2">
+                Your ultimate guide to witnessing the magical aurora borealis.
+              </p>
+              <div
+                class="flex items-center justify-between text-xs text-muted-foreground"
+              >
+                <div class="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-clock w-3 h-3"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  10 min read
+                </div>
+                <span>2024-01-10</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-elevated overflow-hidden group animate-fade-in">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=200&fit=crop"
+                alt="Essential Packing Tips for Every Traveler"
+                class="w-full h-48 object-cover"
+              />
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span
+                  class="px-2 py-1 rounded-full text-xs font-medium text-white"
+                  style="background-color: #ec4899"
+                  >Tips & Guides</span
+                >
+              </div>
+              <div class="absolute top-3 right-3">
+                <span class="badge-warning">Draft</span>
+              </div>
+              <div
+                class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-story-btn"
+                  data-story-id="5"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-eye w-4 h-4"
+                  />
+                </button>
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-story-btn"
+                  data-story-id="5"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-edit w-4 h-4"
+                  />
+                </button>
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-trash-2 w-4 h-4"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-heading mb-2 line-clamp-2">
+                Essential Packing Tips for Every Traveler
+              </h3>
+              <p class="text-sm text-muted-foreground mb-3 line-clamp-2">
+                Learn how to pack smart and light for any destination.
+              </p>
+              <div
+                class="flex items-center justify-between text-xs text-muted-foreground"
+              >
+                <div class="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-clock w-3 h-3"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  5 min read
+                </div>
+                <!-- <span>2024-01-08</span> - published_at is null -->
+              </div>
+            </div>
+          </div>
+          <div class="card-elevated overflow-hidden group animate-fade-in">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=300&h=200&fit=crop"
+                alt="Ultimate Safari Adventure in Kenya"
+                class="w-full h-48 object-cover"
+              />
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span
+                  class="px-2 py-1 rounded-full text-xs font-medium text-white"
+                  style="background-color: #10b981"
+                  >Adventure</span
+                >
+              </div>
+              <div class="absolute top-3 right-3">
+                <span class="badge-success">Published</span>
+              </div>
+              <div
+                class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors view-story-btn"
+                  data-story-id="6"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-eye w-4 h-4"
+                  />
+                </button>
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors edit-story-btn"
+                  data-story-id="6"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-edit w-4 h-4"
+                  />
+                </button>
+                <button
+                  class="w-8 h-8 bg-card rounded-lg flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-trash-2 w-4 h-4"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-heading mb-2 line-clamp-2">
+                Ultimate Safari Adventure in Kenya
+              </h3>
+              <p class="text-sm text-muted-foreground mb-3 line-clamp-2">
+                Experience the wild beauty of African wildlife up close.
+              </p>
+              <div
+                class="flex items-center justify-between text-xs text-muted-foreground"
+              >
+                <div class="flex items-center gap-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-clock w-3 h-3"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  9 min read
+                </div>
+                <span>2024-01-08</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Add/Edit Modal -->
+      <div
+        id="add-edit-story-modal"
+        class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 hidden"
+      >
+        <div
+          class="bg-card rounded-2xl shadow-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto animate-scale-in"
+        >
+          <div
+            class="p-6 border-b border-border/30 flex items-center justify-between"
+          >
+            <h2
+              class="text-xl font-bold text-heading"
+              id="story-modal-title"
+            ></h2>
+            <button
+              class="text-muted-foreground hover:text-foreground"
+              id="close-story-modal"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-x w-5 h-5"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="p-6 space-y-4">
+            <div>
+              <label class="block text-sm font-medium mb-2" for="story-title"
+                >Title</label
+              >
+              <input
+                type="text"
+                class="input-field"
+                id="story-title"
+                placeholder="Story title"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2" for="story-slug"
+                >Slug</label
+              >
+              <input
+                type="text"
+                class="input-field"
+                id="story-slug"
+                placeholder="story-slug"
+              />
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label
+                  class="block text-sm font-medium mb-2"
+                  for="story-category"
+                  >Category</label
+                >
+                <div class="relative">
+                  <select
+                    class="input-field appearance-none"
+                    id="story-category"
+                  >
+                    <option value="">Select category</option>
+                    <option value="1">Adventure</option>
+                    <option value="2">Culture</option>
+                    <option value="3">Food & Drink</option>
+                    <option value="4">Nature</option>
+                    <option value="5">Tips & Guides</option>
+                  </select>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-down w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-muted pointer-events-none"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <label
+                  class="block text-sm font-medium mb-2"
+                  for="story-reading-time"
+                  >Reading Time (min)</label
+                >
+                <input
+                  type="number"
+                  class="input-field"
+                  id="story-reading-time"
+                  placeholder="5"
+                />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2" for="story-excerpt"
+                >Excerpt</label
+              >
+              <textarea
+                class="input-field h-20 resize-none"
+                id="story-excerpt"
+                placeholder="Brief summary of the story"
+              ></textarea>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2" for="story-content"
+                >Content</label
+              >
+              <textarea
+                class="input-field h-40 resize-none"
+                id="story-content"
+                placeholder="Write your story content here..."
+              ></textarea>
+            </div>
+            <div>
+              <label
+                class="block text-sm font-medium mb-2"
+                for="story-image-url"
+                >Featured Image URL</label
+              >
+              <input
+                type="text"
+                class="input-field"
+                id="story-image-url"
+                placeholder="https://..."
+              />
+            </div>
+            <div class="flex items-center gap-6">
+              <div class="flex items-center gap-3">
+                <input
+                  type="checkbox"
+                  id="story-published"
+                  class="w-4 h-4 accent-primary"
+                />
+                <label for="story-published" class="text-sm font-medium"
+                  >Published</label
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <input
+                  type="checkbox"
+                  id="story-featured"
+                  class="w-4 h-4 accent-primary"
+                />
+                <label for="story-featured" class="text-sm font-medium"
+                  >Featured</label
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="p-6 border-t border-border/30 flex items-center justify-end gap-3"
+          >
+            <button class="btn-outline" id="cancel-story-edit">Cancel</button>
+            <button class="btn-primary" id="save-story-btn">Save Story</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const storiesData = [
-                { id: "1", slug: "hidden-gems-bali", title: "10 Hidden Gems in Bali You Must Visit", excerpt: "Discover the lesser-known paradises of Bali that most tourists miss.", category: { id: "1", name: "Adventure", color: "#10B981" }, is_published: true, is_featured: true, reading_time: 8, published_at: "2024-01-15", image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=300&h=200&fit=crop" },
-                { id: "2", slug: "japanese-culture-guide", title: "A Complete Guide to Japanese Culture", excerpt: "Everything you need to know about Japanese traditions and customs.", category: { id: "2", name: "Culture", color: "#8B5CF6" }, is_published: true, is_featured: false, reading_time: 12, published_at: "2024-01-14", image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=300&h=200&fit=crop" },
-                { id: "3", slug: "street-food-bangkok", title: "Best Street Food in Bangkok", excerpt: "A foodie journey through the vibrant streets of Bangkok.", category: { id: "3", name: "Food & Drink", color: "#F59E0B" }, is_published: true, is_featured: true, reading_time: 6, published_at: "2024-01-12", image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=300&h=200&fit=crop" },
-                { id: "4", slug: "northern-lights-iceland", title: "Chasing Northern Lights in Iceland", excerpt: "Your ultimate guide to witnessing the magical aurora borealis.", category: { id: "4", name: "Nature", color: "#06B6D4" }, is_published: true, is_featured: false, reading_time: 10, published_at: "2024-01-10", image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=300&h=200&fit=crop" },
-                { id: "5", slug: "packing-tips-travelers", title: "Essential Packing Tips for Every Traveler", excerpt: "Learn how to pack smart and light for any destination.", category: { id: "5", name: "Tips & Guides", color: "#EC4899" }, is_published: false, is_featured: false, reading_time: 5, published_at: null, image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=200&fit=crop" },
-                { id: "6", slug: "safari-adventure-kenya", title: "Ultimate Safari Adventure in Kenya", excerpt: "Experience the wild beauty of African wildlife up close.", category: { id: "1", name: "Adventure", color: "#10B981" }, is_published: true, is_featured: false, reading_time: 9, published_at: "2024-01-08", image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=300&h=200&fit=crop" },
-            ];
+      document.addEventListener("DOMContentLoaded", () => {
+        const storiesData = [
+          {
+            id: "1",
+            slug: "hidden-gems-bali",
+            title: "10 Hidden Gems in Bali You Must Visit",
+            excerpt:
+              "Discover the lesser-known paradises of Bali that most tourists miss.",
+            category: { id: "1", name: "Adventure", color: "#10B981" },
+            is_published: true,
+            is_featured: true,
+            reading_time: 8,
+            published_at: "2024-01-15",
+            image:
+              "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=300&h=200&fit=crop",
+          },
+          {
+            id: "2",
+            slug: "japanese-culture-guide",
+            title: "A Complete Guide to Japanese Culture",
+            excerpt:
+              "Everything you need to know about Japanese traditions and customs.",
+            category: { id: "2", name: "Culture", color: "#8B5CF6" },
+            is_published: true,
+            is_featured: false,
+            reading_time: 12,
+            published_at: "2024-01-14",
+            image:
+              "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=300&h=200&fit=crop",
+          },
+          {
+            id: "3",
+            slug: "street-food-bangkok",
+            title: "Best Street Food in Bangkok",
+            excerpt: "A foodie journey through the vibrant streets of Bangkok.",
+            category: { id: "3", name: "Food & Drink", color: "#F59E0B" },
+            is_published: true,
+            is_featured: true,
+            reading_time: 6,
+            published_at: "2024-01-12",
+            image:
+              "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=300&h=200&fit=crop",
+          },
+          {
+            id: "4",
+            slug: "northern-lights-iceland",
+            title: "Chasing Northern Lights in Iceland",
+            excerpt:
+              "Your ultimate guide to witnessing the magical aurora borealis.",
+            category: { id: "4", name: "Nature", color: "#06B6D4" },
+            is_published: true,
+            is_featured: false,
+            reading_time: 10,
+            published_at: "2024-01-10",
+            image:
+              "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=300&h=200&fit=crop",
+          },
+          {
+            id: "5",
+            slug: "packing-tips-travelers",
+            title: "Essential Packing Tips for Every Traveler",
+            excerpt: "Learn how to pack smart and light for any destination.",
+            category: { id: "5", name: "Tips & Guides", color: "#EC4899" },
+            is_published: false,
+            is_featured: false,
+            reading_time: 5,
+            published_at: null,
+            image:
+              "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=200&fit=crop",
+          },
+          {
+            id: "6",
+            slug: "safari-adventure-kenya",
+            title: "Ultimate Safari Adventure in Kenya",
+            excerpt: "Experience the wild beauty of African wildlife up close.",
+            category: { id: "1", name: "Adventure", color: "#10B981" },
+            is_published: true,
+            is_featured: false,
+            reading_time: 9,
+            published_at: "2024-01-08",
+            image:
+              "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=300&h=200&fit=crop",
+          },
+        ];
 
-            const categories = [
-                { id: "1", name: "Adventure", color: "#10B981" },
-                { id: "2", name: "Culture", color: "#8B5CF6" },
-                { id: "3", name: "Food & Drink", color: "#F59E0B" },
-                { id: "4", name: "Nature", color: "#06B6D4" },
-                { id: "5", name: "Tips & Guides", color: "#EC4899" },
-            ];
+        const categories = [
+          { id: "1", name: "Adventure", color: "#10B981" },
+          { id: "2", name: "Culture", color: "#8B5CF6" },
+          { id: "3", name: "Food & Drink", color: "#F59E0B" },
+          { id: "4", name: "Nature", color: "#06B6D4" },
+          { id: "5", name: "Tips & Guides", color: "#EC4899" },
+        ];
 
-            const searchInput = document.getElementById('search-stories');
-            const storiesGrid = document.getElementById('stories-grid');
-            const newStoryBtn = document.getElementById('new-story-btn');
-            const addEditStoryModal = document.getElementById('add-edit-story-modal');
-            const closeStoryModalBtn = document.getElementById('close-story-modal');
-            const cancelStoryEditBtn = document.getElementById('cancel-story-edit');
-            const saveStoryBtn = document.getElementById('save-story-btn');
-            const modalTitle = document.getElementById('story-modal-title');
-            const inputTitle = document.getElementById('story-title');
-            const inputSlug = document.getElementById('story-slug');
-            const selectCategory = document.getElementById('story-category');
-            const inputReadingTime = document.getElementById('story-reading-time');
-            const inputExcerpt = document.getElementById('story-excerpt');
-            const inputContent = document.getElementById('story-content');
-            const inputImageUrl = document.getElementById('story-image-url');
-            const inputPublished = document.getElementById('story-published');
-            const inputFeatured = document.getElementById('story-featured');
+        const searchInput = document.getElementById("search-stories");
+        const storiesGrid = document.getElementById("stories-grid");
+        const newStoryBtn = document.getElementById("new-story-btn");
+        const addEditStoryModal = document.getElementById(
+          "add-edit-story-modal"
+        );
+        const closeStoryModalBtn = document.getElementById("close-story-modal");
+        const cancelStoryEditBtn = document.getElementById("cancel-story-edit");
+        const saveStoryBtn = document.getElementById("save-story-btn");
+        const modalTitle = document.getElementById("story-modal-title");
+        const inputTitle = document.getElementById("story-title");
+        const inputSlug = document.getElementById("story-slug");
+        const selectCategory = document.getElementById("story-category");
+        const inputReadingTime = document.getElementById("story-reading-time");
+        const inputExcerpt = document.getElementById("story-excerpt");
+        const inputContent = document.getElementById("story-content");
+        const inputImageUrl = document.getElementById("story-image-url");
+        const inputPublished = document.getElementById("story-published");
+        const inputFeatured = document.getElementById("story-featured");
 
+        let currentSelectedStory = null;
 
-            let currentSelectedStory = null;
-
-            function renderStories(filteredData) {
-                storiesGrid.innerHTML = '';
-                filteredData.forEach(story => {
-                    const storyCard = document.createElement('div');
-                    storyCard.className = 'card-elevated overflow-hidden group animate-fade-in';
-                    storyCard.innerHTML = `
+        function renderStories(filteredData) {
+          storiesGrid.innerHTML = "";
+          filteredData.forEach((story) => {
+            const storyCard = document.createElement("div");
+            storyCard.className =
+              "card-elevated overflow-hidden group animate-fade-in";
+            storyCard.innerHTML = `
                         <div class="relative">
-                            <img src="${story.image}" alt="${story.title}" class="w-full h-48 object-cover" />
+                            <img src="${story.image}" alt="${
+              story.title
+            }" class="w-full h-48 object-cover" />
                             <div class="absolute top-3 left-3 flex gap-2">
                                 <span
                                     class="px-2 py-1 rounded-full text-xs font-medium text-white"
-                                    style="background-color: ${story.category.color};"
+                                    style="background-color: ${
+                                      story.category.color
+                                    };"
                                 >
                                     ${story.category.name}
                                 </span>
-                                ${story.is_featured ? '<span class="badge-info">Featured</span>' : ''}
+                                ${
+                                  story.is_featured
+                                    ? '<span class="badge-info">Featured</span>'
+                                    : ""
+                                }
                             </div>
                             <div class="absolute top-3 right-3">
-                                <span class="${story.is_published ? 'badge-success' : 'badge-warning'}">
-                                    ${story.is_published ? 'Published' : 'Draft'}
+                                <span class="${
+                                  story.is_published
+                                    ? "badge-success"
+                                    : "badge-warning"
+                                }">
+                                    ${
+                                      story.is_published ? "Published" : "Draft"
+                                    }
                                 </span>
                             </div>
                             <div class="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -449,111 +1268,118 @@
                             </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="font-semibold text-heading mb-2 line-clamp-2">${story.title}</h3>
-                            <p class="text-sm text-muted-foreground mb-3 line-clamp-2">${story.excerpt}</p>
+                            <h3 class="font-semibold text-heading mb-2 line-clamp-2">${
+                              story.title
+                            }</h3>
+                            <p class="text-sm text-muted-foreground mb-3 line-clamp-2">${
+                              story.excerpt
+                            }</p>
                             <div class="flex items-center justify-between text-xs text-muted-foreground">
                                 <div class="flex items-center gap-1">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-3 h-3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                                     ${story.reading_time} min read
                                 </div>
-                                ${story.published_at ? `<span>${story.published_at}</span>` : ''}
+                                ${
+                                  story.published_at
+                                    ? `<span>${story.published_at}</span>`
+                                    : ""
+                                }
                             </div>
                         </div>
                     `;
-                    storiesGrid.appendChild(storyCard);
-                });
-                attachModalTriggerListeners();
-            }
+            storiesGrid.appendChild(storyCard);
+          });
+          attachModalTriggerListeners();
+        }
 
-            function filterStories() {
-                const query = searchInput.value.toLowerCase();
-                const filtered = storiesData.filter(s =>
-                    s.title.toLowerCase().includes(query) || s.category.name.toLowerCase().includes(query)
-                );
-                renderStories(filtered);
-            }
+        function filterStories() {
+          const query = searchInput.value.toLowerCase();
+          const filtered = storiesData.filter(
+            (s) =>
+              s.title.toLowerCase().includes(query) ||
+              s.category.name.toLowerCase().includes(query)
+          );
+          renderStories(filtered);
+        }
 
-            searchInput.addEventListener('input', filterStories);
+        searchInput.addEventListener("input", filterStories);
 
-            newStoryBtn.addEventListener('click', () => {
-                currentSelectedStory = null;
-                modalTitle.textContent = "Create New Story";
-                inputTitle.value = '';
-                inputSlug.value = '';
-                selectCategory.value = '';
-                inputReadingTime.value = '';
-                inputExcerpt.value = '';
-                inputContent.value = ''; // Assuming there's a content input
-                inputImageUrl.value = '';
-                inputPublished.checked = false;
-                inputFeatured.checked = false;
-                addEditStoryModal.classList.remove('hidden');
-            });
-
-            function attachModalTriggerListeners() {
-                document.querySelectorAll('.edit-story-btn').forEach(button => {
-                    button.addEventListener('click', () => {
-                        const storyId = button.dataset.storyId;
-                        currentSelectedStory = storiesData.find(s => s.id === storyId);
-                        if (currentSelectedStory) {
-                            modalTitle.textContent = "Edit Story";
-                            inputTitle.value = currentSelectedStory.title;
-                            inputSlug.value = currentSelectedStory.slug;
-                            selectCategory.value = currentSelectedStory.category.id;
-                            inputReadingTime.value = currentSelectedStory.reading_time;
-                            inputExcerpt.value = currentSelectedStory.excerpt;
-                            inputContent.value = ''; // Assuming content is not in the data structure
-                            inputImageUrl.value = currentSelectedStory.image;
-                            inputPublished.checked = currentSelectedStory.is_published;
-                            inputFeatured.checked = currentSelectedStory.is_featured;
-                            addEditStoryModal.classList.remove('hidden');
-                        }
-                    });
-                });
-            }
-
-
-            closeStoryModalBtn.addEventListener('click', () => {
-                addEditStoryModal.classList.add('hidden');
-            });
-
-            cancelStoryEditBtn.addEventListener('click', () => {
-                addEditStoryModal.classList.add('hidden');
-            });
-
-            saveStoryBtn.addEventListener('click', () => {
-                // In a real application, you'd send this data to a backend.
-                // For this static version, we'll just log it.
-                console.log('Saving story:', {
-                    id: currentSelectedStory ? currentSelectedStory.id : 'new-id', // Simulate ID for new ones
-                    title: inputTitle.value,
-                    slug: inputSlug.value,
-                    category: selectCategory.value,
-                    reading_time: inputReadingTime.value,
-                    excerpt: inputExcerpt.value,
-                    content: inputContent.value,
-                    image: inputImageUrl.value,
-                    is_published: inputPublished.checked,
-                    is_featured: inputFeatured.checked
-                });
-                addEditStoryModal.classList.add('hidden');
-                // Re-render if necessary to show changes
-                filterStories();
-            });
-
-
-            // Populate category select options
-            categories.forEach(cat => {
-                const option = document.createElement('option');
-                option.value = cat.id;
-                option.textContent = cat.name;
-                selectCategory.appendChild(option);
-            });
-
-
-            // Initial render
-            renderStories(storiesData);
+        newStoryBtn.addEventListener("click", () => {
+          currentSelectedStory = null;
+          modalTitle.textContent = "Create New Story";
+          inputTitle.value = "";
+          inputSlug.value = "";
+          selectCategory.value = "";
+          inputReadingTime.value = "";
+          inputExcerpt.value = "";
+          inputContent.value = ""; // Assuming there's a content input
+          inputImageUrl.value = "";
+          inputPublished.checked = false;
+          inputFeatured.checked = false;
+          addEditStoryModal.classList.remove("hidden");
         });
+
+        function attachModalTriggerListeners() {
+          document.querySelectorAll(".edit-story-btn").forEach((button) => {
+            button.addEventListener("click", () => {
+              const storyId = button.dataset.storyId;
+              currentSelectedStory = storiesData.find((s) => s.id === storyId);
+              if (currentSelectedStory) {
+                modalTitle.textContent = "Edit Story";
+                inputTitle.value = currentSelectedStory.title;
+                inputSlug.value = currentSelectedStory.slug;
+                selectCategory.value = currentSelectedStory.category.id;
+                inputReadingTime.value = currentSelectedStory.reading_time;
+                inputExcerpt.value = currentSelectedStory.excerpt;
+                inputContent.value = ""; // Assuming content is not in the data structure
+                inputImageUrl.value = currentSelectedStory.image;
+                inputPublished.checked = currentSelectedStory.is_published;
+                inputFeatured.checked = currentSelectedStory.is_featured;
+                addEditStoryModal.classList.remove("hidden");
+              }
+            });
+          });
+        }
+
+        closeStoryModalBtn.addEventListener("click", () => {
+          addEditStoryModal.classList.add("hidden");
+        });
+
+        cancelStoryEditBtn.addEventListener("click", () => {
+          addEditStoryModal.classList.add("hidden");
+        });
+
+        saveStoryBtn.addEventListener("click", () => {
+          // In a real application, you'd send this data to a backend.
+          // For this static version, we'll just log it.
+          console.log("Saving story:", {
+            id: currentSelectedStory ? currentSelectedStory.id : "new-id", // Simulate ID for new ones
+            title: inputTitle.value,
+            slug: inputSlug.value,
+            category: selectCategory.value,
+            reading_time: inputReadingTime.value,
+            excerpt: inputExcerpt.value,
+            content: inputContent.value,
+            image: inputImageUrl.value,
+            is_published: inputPublished.checked,
+            is_featured: inputFeatured.checked,
+          });
+          addEditStoryModal.classList.add("hidden");
+          // Re-render if necessary to show changes
+          filterStories();
+        });
+
+        // Populate category select options
+        categories.forEach((cat) => {
+          const option = document.createElement("option");
+          option.value = cat.id;
+          option.textContent = cat.name;
+          selectCategory.appendChild(option);
+        });
+
+        // Initial render
+        renderStories(storiesData);
+      });
     </script>
-</body>
+  </body>
 </html>
